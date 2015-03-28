@@ -1,0 +1,19 @@
+﻿@model SportsStore.WebUI.Models.ProductsListViewModel
+@{
+    ViewBag.Title = "Products";
+}
+
+<!-- используем частичное представление для каждого продукта-->
+@foreach (var p in Model.Products)
+{
+    @Html.Partial("ProductSummary", p)
+}
+
+<!-- используем класс которые генерирует гиперссылки на страницы-->
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new
+{
+    page =
+        x
+}))
+</div>
