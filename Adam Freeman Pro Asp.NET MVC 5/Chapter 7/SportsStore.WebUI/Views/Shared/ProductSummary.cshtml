@@ -8,6 +8,8 @@
     @using (Html.BeginForm("AddToCart", "Cart"))
     {
         <div class="pull-right">
+            <!-- Разница между  HiddenFor и Hidden в том, что в одном случае имя аргумента совпадает со входным в функции контролера
+                , а в другом нет-->
             @Html.HiddenFor(x => x.ProductID)
             @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
             <input type="submit" class="btn btn-success" value="Add to cart" />

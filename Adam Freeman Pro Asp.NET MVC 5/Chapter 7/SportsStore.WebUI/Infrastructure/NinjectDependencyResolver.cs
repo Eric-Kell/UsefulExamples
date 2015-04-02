@@ -7,6 +7,7 @@ using Ninject;
 using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
 using SportsStore.Domain.Concrete;
+using System.Configuration;
 
 /*
  * Как я понимаю, просто класс для работы пакета Ninject
@@ -33,6 +34,16 @@ namespace SportsStore.WebUI.Infrastructure {
         {
             // Теперь обращаясь к IProductRepository мы всегда будет получать такой объект
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
+
+            // передаем аргумент в конструктор
+            // Определяем свойство WriteAsFile, читаем его из web.config
+            EmailSettings emailSettings = new EmailSettings
+            {
+                WriteAsFile = bool.Parse(ConfigurationManager
+                .AppSettings["Email.WriteAsFile"] ?? "false")
+            };
+            kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
+            .WithConstructorArgument("settings", emailSettings);
         }
     }
 }

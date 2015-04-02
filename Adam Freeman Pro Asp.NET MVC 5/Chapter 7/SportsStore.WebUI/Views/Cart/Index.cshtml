@@ -4,9 +4,13 @@
     ViewBag.Title = "Sports Store: Your Cart";
 }
 
+<style>
+    #cartTable td { vertical-align: middle; }
+</style>
+
 <h2>Your cart</h2>
 
-<table class="table">
+<table id="cartTable" class="table">
     <thead>
         <tr>
             <th>Quantity</th>
@@ -27,6 +31,17 @@
                 <td class="text-right">
                     @((line.Quantity * line.Product.Price).ToString("c"))
                 </td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        <!-- Разница между  HiddenFor и Hidden в том, что в одном случае имя аргумента совпадает со входным в функции контролера
+                        , а в другом нет-->
+                        @Html.Hidden("ProductId", line.Product.ProductID)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Remove" />
+                    }
+                </td>
             </tr>
         }
     </tbody>
@@ -45,5 +60,5 @@
         Continue
         shopping
     </a>
-
+@Html.ActionLink("Checkout now", "Checkout", null, new { @class = "btn btn-primary"})
 </div>
