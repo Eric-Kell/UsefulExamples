@@ -4,6 +4,7 @@
 
 namespace SportsStore.Domain.Entities
 {
+
     public class Product
     {
         public int ProductID { get; set; }

@@ -16,7 +16,7 @@ namespace SportsStore.Domain.Concrete
         public string Password = "MySmtpPassword";
         public string ServerName = "smtp.example.com";
         public int ServerPort = 587;
-        public bool WriteAsFile = true;
+        public bool WriteAsFile = false;
         public string FileLocation = @"C:\Temp";
     }
 

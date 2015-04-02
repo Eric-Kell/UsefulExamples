@@ -4,13 +4,9 @@ using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
 using SportsStore.WebUI.Models;
 
-/*
- * Использует сессию. Для того, что объекты во время сессии висели в куки и никуда не записывались. Типа сессия кончилась - они удалились.
- * Данные из сессии мы получаем благодаря классу Infrastructure/Binders/CartModelBinder.cs и он же указан в Global.asax
- */
-
 namespace SportsStore.WebUI.Controllers
 {
+
     public class CartController : Controller
     {
         private IProductRepository repository;
@@ -22,6 +18,7 @@ namespace SportsStore.WebUI.Controllers
             orderProcessor = proc;
         }
 
+
         public ViewResult Index(Cart cart, string returnUrl)
         {
             return View(new CartIndexViewModel
@@ -31,10 +28,12 @@ namespace SportsStore.WebUI.Controllers
             });
         }
 
-        public RedirectToRouteResult AddToCart(Cart cart, int productId, string returnUrl)
+        public RedirectToRouteResult AddToCart(Cart cart, int productId,
+                string returnUrl)
         {
             Product product = repository.Products
-            .FirstOrDefault(p => p.ProductID == productId);
+                .FirstOrDefault(p => p.ProductID == productId);
+
             if (product != null)
             {
                 cart.AddItem(product, 1);
@@ -42,10 +41,12 @@ namespace SportsStore.WebUI.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        public RedirectToRouteResult RemoveFromCart(Cart cart, int productId, string returnUrl)
+        public RedirectToRouteResult RemoveFromCart(Cart cart, int productId,
+                string returnUrl)
         {
             Product product = repository.Products
-            .FirstOrDefault(p => p.ProductID == productId);
+                .FirstOrDefault(p => p.ProductID == productId);
+
             if (product != null)
             {
                 cart.RemoveLine(product);
@@ -53,13 +54,16 @@ namespace SportsStore.WebUI.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        // метод для виджета - краткой инфы о корзине
         public PartialViewResult Summary(Cart cart)
         {
             return PartialView(cart);
         }
 
-        // для кнопки с таким же названием, будет формочка с доставкой
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
+        }
+
         [HttpPost]
         public ViewResult Checkout(Cart cart, ShippingDetails shippingDetails)
         {
@@ -67,6 +71,7 @@ namespace SportsStore.WebUI.Controllers
             {
                 ModelState.AddModelError("", "Sorry, your cart is empty!");
             }
+
             if (ModelState.IsValid)
             {
                 orderProcessor.ProcessOrder(cart, shippingDetails);

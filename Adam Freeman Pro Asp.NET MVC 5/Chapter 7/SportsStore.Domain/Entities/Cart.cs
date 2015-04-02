@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace SportsStore.Domain.Entities
 {
+
     public class Cart
     {
         private List<CartLine> lineCollection = new List<CartLine>();
@@ -10,8 +11,9 @@ namespace SportsStore.Domain.Entities
         public void AddItem(Product product, int quantity)
         {
             CartLine line = lineCollection
-            .Where(p => p.Product.ProductID == product.ProductID)
-            .FirstOrDefault();
+                .Where(p => p.Product.ProductID == product.ProductID)
+                .FirstOrDefault();
+
             if (line == null)
             {
                 lineCollection.Add(new CartLine
@@ -25,19 +27,22 @@ namespace SportsStore.Domain.Entities
                 line.Quantity += quantity;
             }
         }
+
         public void RemoveLine(Product product)
         {
-            lineCollection.RemoveAll(l => l.Product.ProductID ==
-            product.ProductID);
+            lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
         }
+
         public decimal ComputeTotalValue()
         {
             return lineCollection.Sum(e => e.Product.Price * e.Quantity);
+
         }
         public void Clear()
         {
             lineCollection.Clear();
         }
+
         public IEnumerable<CartLine> Lines
         {
             get { return lineCollection; }
