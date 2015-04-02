@@ -13,9 +13,11 @@
     </div>
     <div class="row panel">
         <div id="categories" class="col-xs-3">
-            Put something useful here later
+            <!-- ВЫЗЫВАЕМ МЕТОД КОНТРОЛЕРА NAV-->
+            @Html.Action("Menu", "Nav")
         </div>
         <div class="col-xs-8">
+            <!-- ВЫЗЫВАЕМ List.cshtml-->
             @RenderBody()
         </div>
     </div>

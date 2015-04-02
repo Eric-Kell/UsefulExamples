@@ -3,6 +3,10 @@ using System.Text;
 using System.Web.Mvc;
 using SportsStore.WebUI.Models;
 
+/*
+ * генерирует HTML код ссылок на страницы.
+ */
+
 namespace SportsStore.WebUI.HtmlHelpers
 {
     public static class PagingHelpers

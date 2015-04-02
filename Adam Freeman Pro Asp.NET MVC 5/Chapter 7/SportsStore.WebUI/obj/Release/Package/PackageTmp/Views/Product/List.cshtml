@@ -9,11 +9,7 @@
     @Html.Partial("ProductSummary", p)
 }
 
-<!-- используем класс которые генерирует гиперссылки на страницы-->
-<div class="pager">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new
-{
-    page =
-        x
-}))
+<!-- используем класс которые генерирует гиперссылки на страницы c учетом текущей категории и страницы-->
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
 </div>
