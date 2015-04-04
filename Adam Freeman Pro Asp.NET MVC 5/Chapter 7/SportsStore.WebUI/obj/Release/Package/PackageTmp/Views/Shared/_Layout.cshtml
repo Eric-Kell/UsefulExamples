@@ -6,19 +6,35 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
-    <link href="∼/Content/ErrorStyles.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
+    <style>
+        .navbar-right {
+            float: right !important;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse" role="navigation">
-        <a class="navbar-brand" href="#">SPORTS STORE</a>
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">
+            <!-- 2 варианта оботражения для разных экранов 1 скрыт по умолчанию. Из bootstrap. xs - переключение >786px-->
+            <span class="hidden-xs">SPORTS STORE</span>
+            <div class="visible-xs">SPORTS</div>
+            <div class="visible-xs">STORE</div>
+        </a>
         @Html.Action("Summary", "Cart")
     </div>
+    <!--Если у нас мелкий экран, то говорим об этом контролеру Nav -->
+    <div class="visible-xs">
+        @Html.Action("Menu", "Nav", new { horizontalLayout = true })
+    </div>
     <div class="row panel">
-        <div id="categories" class="col-xs-3">
+        <!-- не будет категорий в мобильной версии-->
+        <div class="col-sm-3 hidden-xs">
             @Html.Action("Menu", "Nav")
         </div>
-        <div class="col-xs-8">
+        <div class="col-xs-12 col-sm-8">
             @RenderBody()
         </div>
     </div>
