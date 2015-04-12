@@ -42,4 +42,3 @@ C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\Adam Freeman Pro Asp
 C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\Adam Freeman Pro Asp.NET MVC 5\Chapter 7\SportsStore.Domain\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\Adam Freeman Pro Asp.NET MVC 5\Chapter 7\SportsStore.Domain\obj\Debug\SportsStore.Domain.dll
 C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\Adam Freeman Pro Asp.NET MVC 5\Chapter 7\SportsStore.Domain\obj\Debug\SportsStore.Domain.pdb
-C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\Adam Freeman Pro Asp.NET MVC 5\Chapter 7\SportsStore.Domain\obj\Debug\SportsStore.Domain.csprojResolveAssemblyReference.cache

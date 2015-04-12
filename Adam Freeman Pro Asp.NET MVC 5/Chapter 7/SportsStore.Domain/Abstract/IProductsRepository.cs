@@ -18,5 +18,7 @@ namespace SportsStore.Domain.Abstract
         IEnumerable<Product> Products { get; }
         // юзается как для добавления, так и для обновления
         void SaveProduct(Product product);
+
+        Product DeleteProduct(int productID);
     }
 }
