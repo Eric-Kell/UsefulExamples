@@ -126,11 +126,23 @@
   <data name="buttonChangeLanguage.Text" xml:space="preserve">
     <value>Переключить на английский язык</value>
   </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Логин и пароль</value>
+  </data>
+  <data name="buttonStreet.Text" xml:space="preserve">
+    <value>Улица:</value>
+  </data>
   <data name="buttonCountry.Text" xml:space="preserve">
     <value>Страна:</value>
   </data>
+  <data name="buttonDistrect.Text" xml:space="preserve">
+    <value>Район:</value>
+  </data>
   <data name="buttonName.Text" xml:space="preserve">
     <value>Имя:</value>
+  </data>
+  <data name="buttonHome.Text" xml:space="preserve">
+    <value>Номер дома:</value>
   </data>
   <data name="buttonState.Text" xml:space="preserve">
     <value>Регион:</value>
@@ -141,23 +153,23 @@
   <data name="buttonCity.Text" xml:space="preserve">
     <value>Город:</value>
   </data>
-  <data name="buttonDistrect.Text" xml:space="preserve">
-    <value>Район:</value>
-  </data>
-  <data name="buttonStreet.Text" xml:space="preserve">
-    <value>Улица:</value>
-  </data>
-  <data name="buttonHome.Text" xml:space="preserve">
-    <value>Номер дома:</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Логин и пароль</value>
-  </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Подробнее</value>
   </data>
+  <data name="buttonBirth.Text" xml:space="preserve">
+    <value>День Рождения:</value>
+  </data>
+  <data name="buttonSalary.Text" xml:space="preserve">
+    <value>Зарплата:</value>
+  </data>
+  <data name="labelZeroes.Text" xml:space="preserve">
+    <value>000 000</value>
+  </data>
+  <data name="groupBoxPrivate.Text" xml:space="preserve">
+    <value>Личная информация</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>710, 762</value>
+    <value>710, 1045</value>
   </data>
 </root>

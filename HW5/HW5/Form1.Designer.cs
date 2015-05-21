@@ -52,6 +52,16 @@
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonBirth = new System.Windows.Forms.Button();
+            this.comboBoxDay = new System.Windows.Forms.ComboBox();
+            this.comboBoxMonth = new System.Windows.Forms.ComboBox();
+            this.comboBoxYear = new System.Windows.Forms.ComboBox();
+            this.buttonSalary = new System.Windows.Forms.Button();
+            this.comboBoxSalary = new System.Windows.Forms.ComboBox();
+            this.labelZeroes = new System.Windows.Forms.Label();
+            this.labelMoneyUSD = new System.Windows.Forms.Label();
+            this.labelMoneyRub = new System.Windows.Forms.Label();
+            this.groupBoxPrivate = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // richTextBox10
@@ -185,10 +195,77 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
+            // buttonBirth
+            // 
+            resources.ApplyResources(this.buttonBirth, "buttonBirth");
+            this.buttonBirth.Name = "buttonBirth";
+            this.buttonBirth.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxDay
+            // 
+            resources.ApplyResources(this.comboBoxDay, "comboBoxDay");
+            this.comboBoxDay.FormattingEnabled = true;
+            this.comboBoxDay.Name = "comboBoxDay";
+            this.comboBoxDay.SelectedIndexChanged += new System.EventHandler(this.comboBoxDay_SelectedIndexChanged);
+            // 
+            // comboBoxMonth
+            // 
+            resources.ApplyResources(this.comboBoxMonth, "comboBoxMonth");
+            this.comboBoxMonth.FormattingEnabled = true;
+            this.comboBoxMonth.Name = "comboBoxMonth";
+            // 
+            // comboBoxYear
+            // 
+            resources.ApplyResources(this.comboBoxYear, "comboBoxYear");
+            this.comboBoxYear.FormattingEnabled = true;
+            this.comboBoxYear.Name = "comboBoxYear";
+            // 
+            // buttonSalary
+            // 
+            resources.ApplyResources(this.buttonSalary, "buttonSalary");
+            this.buttonSalary.Name = "buttonSalary";
+            this.buttonSalary.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxSalary
+            // 
+            resources.ApplyResources(this.comboBoxSalary, "comboBoxSalary");
+            this.comboBoxSalary.FormattingEnabled = true;
+            this.comboBoxSalary.Name = "comboBoxSalary";
+            // 
+            // labelZeroes
+            // 
+            resources.ApplyResources(this.labelZeroes, "labelZeroes");
+            this.labelZeroes.Name = "labelZeroes";
+            // 
+            // labelMoneyUSD
+            // 
+            resources.ApplyResources(this.labelMoneyUSD, "labelMoneyUSD");
+            this.labelMoneyUSD.Name = "labelMoneyUSD";
+            // 
+            // labelMoneyRub
+            // 
+            resources.ApplyResources(this.labelMoneyRub, "labelMoneyRub");
+            this.labelMoneyRub.Name = "labelMoneyRub";
+            // 
+            // groupBoxPrivate
+            // 
+            resources.ApplyResources(this.groupBoxPrivate, "groupBoxPrivate");
+            this.groupBoxPrivate.Name = "groupBoxPrivate";
+            this.groupBoxPrivate.TabStop = false;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelMoneyRub);
+            this.Controls.Add(this.labelMoneyUSD);
+            this.Controls.Add(this.labelZeroes);
+            this.Controls.Add(this.comboBoxSalary);
+            this.Controls.Add(this.buttonSalary);
+            this.Controls.Add(this.comboBoxYear);
+            this.Controls.Add(this.comboBoxMonth);
+            this.Controls.Add(this.comboBoxDay);
+            this.Controls.Add(this.buttonBirth);
             this.Controls.Add(this.richTextBox4);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.richTextBox10);
@@ -212,9 +289,11 @@
             this.Controls.Add(this.richTextBox6);
             this.Controls.Add(this.buttonDistrect);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxPrivate);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -243,6 +322,16 @@
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonBirth;
+        private System.Windows.Forms.ComboBox comboBoxDay;
+        private System.Windows.Forms.ComboBox comboBoxMonth;
+        private System.Windows.Forms.ComboBox comboBoxYear;
+        private System.Windows.Forms.Button buttonSalary;
+        private System.Windows.Forms.ComboBox comboBoxSalary;
+        private System.Windows.Forms.Label labelZeroes;
+        private System.Windows.Forms.Label labelMoneyUSD;
+        private System.Windows.Forms.Label labelMoneyRub;
+        private System.Windows.Forms.GroupBox groupBoxPrivate;
     }
 }
 

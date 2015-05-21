@@ -118,603 +118,852 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="richTextBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 37</value>
-  </data>
-  <data name="richTextBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="richTextBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="richTextBox10.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextBox10.Name" xml:space="preserve">
-    <value>richTextBox10</value>
-  </data>
-  <data name="&gt;&gt;richTextBox10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBox10.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;richTextBox10.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 73</value>
-  </data>
-  <data name="buttonPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="buttonPassword.Text" xml:space="preserve">
-    <value>Password:</value>
-  </data>
-  <data name="&gt;&gt;buttonPassword.Name" xml:space="preserve">
-    <value>buttonPassword</value>
-  </data>
-  <data name="&gt;&gt;buttonPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPassword.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonPassword.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="richTextBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 73</value>
-  </data>
-  <data name="richTextBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
-  <data name="richTextBox9.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="richTextBox9.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextBox9.Name" xml:space="preserve">
-    <value>richTextBox9</value>
-  </data>
-  <data name="&gt;&gt;richTextBox9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBox9.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;richTextBox9.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 37</value>
-  </data>
-  <data name="buttonLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="buttonLogin.Text" xml:space="preserve">
-    <value>Login:</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Name" xml:space="preserve">
-    <value>buttonLogin</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="buttonChangeLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 470</value>
-  </data>
-  <data name="buttonChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 60</value>
-  </data>
-  <data name="buttonChangeLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonChangeLanguage.Text" xml:space="preserve">
-    <value>Switch to Russian language</value>
-  </data>
-  <data name="&gt;&gt;buttonChangeLanguage.Name" xml:space="preserve">
-    <value>buttonChangeLanguage</value>
-  </data>
-  <data name="&gt;&gt;buttonChangeLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonChangeLanguage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonChangeLanguage.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 13</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 106</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Login and Password</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="buttonStreet.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonStreet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 366</value>
-  </data>
-  <data name="buttonStreet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonStreet.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="buttonStreet.Text" xml:space="preserve">
-    <value>Street Name:</value>
-  </data>
-  <data name="&gt;&gt;buttonStreet.Name" xml:space="preserve">
-    <value>buttonStreet</value>
-  </data>
-  <data name="&gt;&gt;buttonStreet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonStreet.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonStreet.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="buttonCountry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 222</value>
-  </data>
-  <data name="buttonCountry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonCountry.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="buttonCountry.Text" xml:space="preserve">
-    <value>Country:</value>
-  </data>
-  <data name="&gt;&gt;buttonCountry.Name" xml:space="preserve">
-    <value>buttonCountry</value>
-  </data>
-  <data name="&gt;&gt;buttonCountry.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCountry.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonCountry.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 150</value>
-  </data>
-  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
-  <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
-    <value>richTextBox1</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboBoxMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 536</value>
   </data>
   <data name="&gt;&gt;richTextBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="buttonDistrect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonDistrect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 330</value>
-  </data>
-  <data name="buttonDistrect.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonDistrect.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="buttonDistrect.Text" xml:space="preserve">
-    <value>Distrect:</value>
-  </data>
-  <data name="&gt;&gt;buttonDistrect.Name" xml:space="preserve">
-    <value>buttonDistrect</value>
-  </data>
-  <data name="&gt;&gt;buttonDistrect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonDistrect.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonDistrect.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="richTextBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 330</value>
-  </data>
-  <data name="richTextBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
-  <data name="richTextBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="richTextBox6.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextBox6.Name" xml:space="preserve">
-    <value>richTextBox6</value>
-  </data>
-  <data name="&gt;&gt;richTextBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBox6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;richTextBox6.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="buttonName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 150</value>
-  </data>
-  <data name="buttonName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonName.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="buttonName.Text" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="&gt;&gt;buttonName.Name" xml:space="preserve">
-    <value>buttonName</value>
-  </data>
-  <data name="&gt;&gt;buttonName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonName.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="richTextBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 366</value>
-  </data>
-  <data name="richTextBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="richTextBox7.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="richTextBox7.Text" xml:space="preserve">
+  <data name="richTextBox1.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;richTextBox7.Name" xml:space="preserve">
-    <value>richTextBox7</value>
+  <data name="&gt;&gt;comboBoxSalary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;richTextBox7.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonLogin.Name" xml:space="preserve">
+    <value>buttonLogin</value>
+  </data>
+  <data name="buttonBirth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 500</value>
+  </data>
+  <data name="&gt;&gt;richTextBox8.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;richTextBox7.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;richTextBox7.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="richTextBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 294</value>
-  </data>
-  <data name="richTextBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
+  <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
+    <value>richTextBox1</value>
   </data>
   <data name="richTextBox5.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="richTextBox5.Text" xml:space="preserve">
-    <value />
+  <data name="labelMoneyRub.Text" xml:space="preserve">
+    <value>руб.</value>
+  </data>
+  <data name="&gt;&gt;buttonChangeLanguage.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="&gt;&gt;richTextBox5.Name" xml:space="preserve">
     <value>richTextBox5</value>
   </data>
-  <data name="&gt;&gt;richTextBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonPassword.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;richTextBox5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonPassword.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;richTextBox5.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="buttonHome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonHome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 402</value>
-  </data>
-  <data name="buttonHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
   </data>
   <data name="buttonHome.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="buttonHome.Text" xml:space="preserve">
-    <value>Home Number:</value>
-  </data>
-  <data name="&gt;&gt;buttonHome.Name" xml:space="preserve">
-    <value>buttonHome</value>
-  </data>
-  <data name="&gt;&gt;buttonHome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonHome.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonHome.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="buttonState.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 258</value>
-  </data>
-  <data name="buttonState.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonStreet.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 30</value>
   </data>
-  <data name="buttonState.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="buttonState.Text" xml:space="preserve">
-    <value>State:</value>
-  </data>
-  <data name="&gt;&gt;buttonState.Name" xml:space="preserve">
-    <value>buttonState</value>
-  </data>
-  <data name="&gt;&gt;buttonState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonState.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonState.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="buttonSurname.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonSurname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 186</value>
-  </data>
-  <data name="buttonSurname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 30</value>
-  </data>
-  <data name="buttonSurname.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="buttonSurname.Text" xml:space="preserve">
-    <value>Surname:</value>
-  </data>
-  <data name="&gt;&gt;buttonSurname.Name" xml:space="preserve">
-    <value>buttonSurname</value>
-  </data>
-  <data name="&gt;&gt;buttonSurname.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;comboBoxDay.Name" xml:space="preserve">
+    <value>comboBoxDay</value>
   </data>
   <data name="&gt;&gt;buttonSurname.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;buttonSurname.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Login and Password</value>
   </data>
-  <data name="buttonCity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;groupBoxPrivate.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="buttonCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 294</value>
+  <data name="buttonBirth.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="richTextBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;richTextBox9.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;buttonCountry.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="richTextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="comboBoxMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="buttonHome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="labelMoneyUSD.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;buttonHome.Name" xml:space="preserve">
+    <value>buttonHome</value>
+  </data>
+  <data name="&gt;&gt;buttonDistrect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;buttonHome.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;buttonState.Name" xml:space="preserve">
+    <value>buttonState</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="buttonState.Text" xml:space="preserve">
+    <value>State:</value>
+  </data>
+  <data name="buttonBirth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
   </data>
   <data name="buttonCity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="richTextBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonCountry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="richTextBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPrivate.Name" xml:space="preserve">
+    <value>groupBoxPrivate</value>
+  </data>
+  <data name="&gt;&gt;buttonBirth.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelZeroes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonChangeLanguage.Text" xml:space="preserve">
+    <value>Switch to Russian language</value>
+  </data>
+  <data name="buttonHome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 402</value>
+  </data>
+  <data name="&gt;&gt;buttonState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonName.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="richTextBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 258</value>
+  </data>
+  <data name="buttonHome.Text" xml:space="preserve">
+    <value>Home Number:</value>
+  </data>
+  <data name="richTextBox9.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="richTextBox7.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="richTextBox10.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="richTextBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 366</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="richTextBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 330</value>
+  </data>
+  <data name="buttonLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonSalary.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyRub.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBoxPrivate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 246</value>
+  </data>
+  <data name="buttonDistrect.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonState.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;comboBoxYear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 338</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="buttonPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="&gt;&gt;buttonHome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="&gt;&gt;buttonCountry.Name" xml:space="preserve">
+    <value>buttonCountry</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyRub.Name" xml:space="preserve">
+    <value>labelMoneyRub</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;buttonCountry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 37</value>
+  </data>
+  <data name="&gt;&gt;richTextBox10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonCountry.Text" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.Name" xml:space="preserve">
+    <value>richTextBox3</value>
+  </data>
+  <data name="&gt;&gt;richTextBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonHome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonChangeLanguage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonChangeLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 60</value>
+  </data>
+  <data name="richTextBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="&gt;&gt;buttonStreet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="labelMoneyUSD.Text" xml:space="preserve">
+    <value>$</value>
+  </data>
+  <data name="buttonSurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 186</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxDay.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMonth.Name" xml:space="preserve">
+    <value>comboBoxMonth</value>
+  </data>
+  <data name="&gt;&gt;buttonName.Name" xml:space="preserve">
+    <value>buttonName</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Name" xml:space="preserve">
+    <value>richTextBox2</value>
+  </data>
+  <data name="richTextBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 402</value>
+  </data>
+  <data name="labelMoneyRub.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyRub.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="comboBoxMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="richTextBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;labelZeroes.Name" xml:space="preserve">
+    <value>labelZeroes</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.Name" xml:space="preserve">
+    <value>richTextBox7</value>
+  </data>
+  <data name="labelZeroes.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;labelZeroes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonBirth.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="richTextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;buttonChangeLanguage.Name" xml:space="preserve">
+    <value>buttonChangeLanguage</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonLogin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;labelZeroes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboBoxSalary.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="buttonName.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 30</value>
   </data>
   <data name="buttonCity.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="buttonCity.Text" xml:space="preserve">
-    <value>City:</value>
+  <data name="groupBoxPrivate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 470</value>
   </data>
-  <data name="&gt;&gt;buttonCity.Name" xml:space="preserve">
-    <value>buttonCity</value>
+  <data name="buttonDistrect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 330</value>
   </data>
-  <data name="&gt;&gt;buttonCity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="groupBoxPrivate.Text" xml:space="preserve">
+    <value>Private Information</value>
   </data>
-  <data name="&gt;&gt;buttonCity.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="buttonStreet.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;buttonCity.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 186</value>
-  </data>
-  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
-  <data name="richTextBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="richTextBox2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextBox2.Name" xml:space="preserve">
-    <value>richTextBox2</value>
-  </data>
-  <data name="&gt;&gt;richTextBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;richTextBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStreet.Name" xml:space="preserve">
+    <value>buttonStreet</value>
   </data>
   <data name="&gt;&gt;richTextBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;richTextBox2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="richTextBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 402</value>
-  </data>
-  <data name="richTextBox8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 30</value>
   </data>
-  <data name="richTextBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="&gt;&gt;buttonChangeLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="richTextBox8.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;buttonSalary.Name" xml:space="preserve">
+    <value>buttonSalary</value>
   </data>
-  <data name="&gt;&gt;richTextBox8.Name" xml:space="preserve">
-    <value>richTextBox8</value>
+  <data name="buttonCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 294</value>
   </data>
-  <data name="&gt;&gt;richTextBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonCity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;richTextBox8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonCity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyUSD.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;richTextBox8.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="labelZeroes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 617</value>
   </data>
-  <data name="richTextBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 222</value>
-  </data>
-  <data name="richTextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 30</value>
-  </data>
-  <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="richTextBox3.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;richTextBox3.Name" xml:space="preserve">
-    <value>richTextBox3</value>
-  </data>
-  <data name="&gt;&gt;richTextBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonCity.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;richTextBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="buttonCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
   </data>
-  <data name="richTextBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 258</value>
+  <data name="comboBoxYear.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="buttonLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 37</value>
   </data>
   <data name="richTextBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 30</value>
   </data>
-  <data name="richTextBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="richTextBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
   </data>
   <data name="richTextBox4.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelMoneyUSD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;richTextBox9.Name" xml:space="preserve">
+    <value>richTextBox9</value>
+  </data>
+  <data name="&gt;&gt;richTextBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonState.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;richTextBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonCity.Text" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMonth.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxSalary.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonDistrect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="labelZeroes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="buttonLogin.Text" xml:space="preserve">
+    <value>Login:</value>
+  </data>
+  <data name="richTextBox8.Text" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;richTextBox4.Name" xml:space="preserve">
     <value>richTextBox4</value>
   </data>
-  <data name="&gt;&gt;richTextBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
   </data>
-  <data name="&gt;&gt;richTextBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonCity.Name" xml:space="preserve">
+    <value>buttonCity</value>
+  </data>
+  <data name="&gt;&gt;buttonStreet.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;richTextBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;richTextBox10.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 126</value>
+  <data name="&gt;&gt;labelMoneyUSD.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 338</value>
+  <data name="&gt;&gt;buttonDistrect.Name" xml:space="preserve">
+    <value>buttonDistrect</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMonth.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;buttonDistrect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyUSD.Name" xml:space="preserve">
+    <value>labelMoneyUSD</value>
+  </data>
+  <data name="buttonSalary.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;buttonSurname.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="buttonBirth.Text" xml:space="preserve">
+    <value>Birth Date:</value>
+  </data>
+  <data name="buttonName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="comboBoxSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 24</value>
+  </data>
+  <data name="richTextBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 73</value>
+  </data>
+  <data name="labelMoneyRub.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 617</value>
+  </data>
+  <data name="richTextBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="comboBoxDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 536</value>
+  </data>
+  <data name="buttonState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 258</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonDistrect.Text" xml:space="preserve">
+    <value>Distrect:</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCountry.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="richTextBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="comboBoxYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 536</value>
+  </data>
+  <data name="buttonSalary.Text" xml:space="preserve">
+    <value>Your Salary:</value>
+  </data>
+  <data name="buttonStreet.Text" xml:space="preserve">
+    <value>Street Name:</value>
+  </data>
+  <data name="&gt;&gt;comboBoxYear.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>More Details</value>
+  <data name="&gt;&gt;richTextBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;richTextBox6.Name" xml:space="preserve">
+    <value>richTextBox6</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="richTextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 222</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;richTextBox7.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;buttonState.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>887, 762</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
+  <data name="labelZeroes.Text" xml:space="preserve">
+    <value>000,000</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="comboBoxDay.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="buttonChangeLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 722</value>
+  </data>
+  <data name="&gt;&gt;buttonName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 150</value>
+  </data>
+  <data name="&gt;&gt;buttonPassword.Name" xml:space="preserve">
+    <value>buttonPassword</value>
+  </data>
+  <data name="richTextBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 294</value>
+  </data>
+  <data name="&gt;&gt;richTextBox4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;buttonName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 73</value>
+  </data>
+  <data name="&gt;&gt;buttonSurname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelMoneyRub.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 106</value>
+  </data>
+  <data name="&gt;&gt;buttonSurname.Name" xml:space="preserve">
+    <value>buttonSurname</value>
+  </data>
+  <data name="comboBoxDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="buttonPassword.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="&gt;&gt;richTextBox9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxSalary.Name" xml:space="preserve">
+    <value>comboBoxSalary</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 126</value>
+  </data>
+  <data name="buttonStreet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 366</value>
+  </data>
+  <data name="richTextBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="&gt;&gt;buttonState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonHome.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="richTextBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="buttonName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;comboBoxYear.Name" xml:space="preserve">
+    <value>comboBoxYear</value>
+  </data>
+  <data name="buttonDistrect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonSurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelMoneyUSD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 617</value>
+  </data>
+  <data name="&gt;&gt;buttonChangeLanguage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonStreet.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;comboBoxYear.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPrivate.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;richTextBox8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelMoneyRub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 17</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="buttonName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 150</value>
+  </data>
+  <data name="labelMoneyRub.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyRub.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboBoxSalary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 614</value>
+  </data>
+  <data name="labelZeroes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>418, 953</value>
+  </data>
+  <data name="buttonSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 30</value>
+  </data>
+  <data name="buttonStreet.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;labelMoneyUSD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextBox10.Name" xml:space="preserve">
+    <value>richTextBox10</value>
+  </data>
+  <data name="comboBoxYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="&gt;&gt;richTextBox8.Name" xml:space="preserve">
+    <value>richTextBox8</value>
+  </data>
+  <data name="&gt;&gt;buttonCity.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 186</value>
+  </data>
+  <data name="&gt;&gt;buttonBirth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 222</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPrivate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonSalary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 578</value>
+  </data>
+  <data name="groupBoxPrivate.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;comboBoxDay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonLogin.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="buttonSurname.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMoneyUSD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 17</value>
+  </data>
+  <data name="&gt;&gt;buttonSalary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>More Details</value>
+  </data>
+  <data name="richTextBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonSurname.Text" xml:space="preserve">
+    <value>Surname:</value>
+  </data>
+  <data name="buttonCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;buttonBirth.Name" xml:space="preserve">
+    <value>buttonBirth</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxSalary.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;buttonBirth.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;buttonSalary.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;richTextBox8.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;buttonSalary.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDistrect.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ru-RU</value>
+  </metadata>
 </root>

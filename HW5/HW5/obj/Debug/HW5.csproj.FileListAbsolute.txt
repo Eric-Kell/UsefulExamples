@@ -10,3 +10,15 @@ C:\Users\stars_000\Documents\workaholic_penguin\HW5\HW5\obj\Debug\HW5.pdb
 C:\Users\stars_000\Documents\workaholic_penguin\HW5\HW5\bin\Debug\ru-RU\HW5.resources.dll
 C:\Users\stars_000\Documents\workaholic_penguin\HW5\HW5\obj\Debug\HW5.Form1.ru-RU.resources
 C:\Users\stars_000\Documents\workaholic_penguin\HW5\HW5\obj\Debug\ru-RU\HW5.resources.dll
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\bin\Debug\HW5.exe.config
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.exe
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.pdb
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\bin\Debug\HW5.exe
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\bin\Debug\HW5.pdb
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\bin\Debug\ru-RU\HW5.resources.dll
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.csprojResolveAssemblyReference.cache
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.Form1.resources
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.Properties.Resources.resources
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.Form1.ru-RU.resources
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\HW5.csproj.GenerateResource.Cache
+C:\Users\stars_000\Desktop\s123\Проект\UsefulExamples\HW5\HW5\obj\Debug\ru-RU\HW5.resources.dll
