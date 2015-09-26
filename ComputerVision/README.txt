@@ -1,0 +1,2 @@
+Hello, there will be samples of using OpenCV library.
+How to set up OpenCP with Visual Studio and win x64/32 see this https://drthitirat.wordpress.com/2014/12/26/install-opencv-2-4-10-and-use-it-in-msvc-2013-and-qt-5-4-0-of-windows-8-1-64-bit-os-x64-based-processor/
