@@ -21,6 +21,7 @@ void onTrackbarSlide(int pos, void *) {
 		g_run = 1;
 	g_dontset = 0;
 }
+
 int main(int argc, char** argv) {
 	cv::namedWindow("Example2_4", cv::WINDOW_AUTOSIZE);
 	g_cap.open("C:\\tor.mpg");
