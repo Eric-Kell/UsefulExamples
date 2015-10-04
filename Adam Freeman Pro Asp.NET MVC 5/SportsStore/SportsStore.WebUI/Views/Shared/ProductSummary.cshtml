@@ -7,5 +7,15 @@
             @Model.Price.ToString("c")
         </span>
     </h3>
+    @*Суть в том, при отображаем только кнопку добавить, но на самом деле отправляется форма, с 2 мя параматерами ниже*@
+    @using (Html.BeginForm("AddToCart", "Cart"))
+    {
+        <div class="pull-right">
+            @Html.HiddenFor(x => x.ProductID)  @*первый параметр формы*@
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)             
+        @* Пример: Html.Hidden("Name", "Value") => <input type="Name" value="Value" /> *@
+            <input type="submit" class="btn btn-success" value="Add to cart"/>
+        </div>
+    }
     <span class="lead"> @Model.Description</span>
 </div>
