@@ -9,5 +9,13 @@
 }
 
 <div class="btn-group pull-right">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+    @*show actual info about amount items in the way of considering category*@ 
+    @if (Model.CurrentCategory != null)
+    {
+        var x = Model.Products.Where(p => Model.CurrentCategory == null || p.Category == Model.CurrentCategory);
+        Model.PagingInfo.TotalItems = x.Count();
+    }
+    @*generating urls like this:
+        http:// <myserver> : <port> /Chess/Page1*@
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page = x, category = Model.CurrentCategory}))
 </div>
