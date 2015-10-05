@@ -1,11 +1,26 @@
-﻿namespace SportsStore.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+
+namespace SportsStore.Domain.Entities
 {
   public class Product
   {
+    /*
+    В Админ Контроллере, когда редактируем Продукт генерим формочку для редактирования
+    И будут учитываться эти атрибуты.
+    Другие атрибуты нужны чтобы проверять isValid модель.
+    */
+
+    [HiddenInput(DisplayValue = false)]
     public int ProductID { get; set; }
+    [Required(ErrorMessage = "Please enter a product name")]
     public string Name { get; set; }
+    [DataType(DataType.MultilineText)]
     public string Description { get; set; }
+    [Required]
+    [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a positive price")]
     public decimal Price { get; set; }
+    [Required(ErrorMessage = "Please specify a category")]
     public string Category { get; set; }
   }
 }
