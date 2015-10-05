@@ -1,6 +1,15 @@
 ﻿@model SportsStore.Domain.Entities.Product
 
 <div class="well">
+
+    @if (Model.ImageData != null)
+    {
+        <div class="pull-left" style="margin-right: 10px">
+            <img class="img-thumbnail" width="75" height="75"
+                 src="@Url.Action("GetImage", "Product", new {Model.ProductID})"/>
+        </div>
+    }
+
     <h3>
         <strong>@Model.Name</strong>
         <span class="pull-right label label-primary">
@@ -11,9 +20,9 @@
     @using (Html.BeginForm("AddToCart", "Cart"))
     {
         <div class="pull-right">
-            @Html.HiddenFor(x => x.ProductID)  @*первый параметр формы*@
-            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)             
-        @* Пример: Html.Hidden("Name", "Value") => <input type="Name" value="Value" /> *@
+            @Html.HiddenFor(x => x.ProductID) @*первый параметр формы*@
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            @* Пример: Html.Hidden("Name", "Value") => <input type="Name" value="Value" /> *@
             <input type="submit" class="btn btn-success" value="Add to cart"/>
         </div>
     }

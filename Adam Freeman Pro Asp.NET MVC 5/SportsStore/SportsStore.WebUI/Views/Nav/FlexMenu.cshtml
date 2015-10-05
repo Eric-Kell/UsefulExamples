@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<string>
 @{
     bool horizontal = ((bool) (ViewContext.RouteData.Values["horizontalLayout"] ?? false));
-    string wrapperClasses = horizontal ? "btn-group btn-group-sm btn-groupjustified" : null;
+    string wrapperClasses = horizontal ? "btn-group btn-group-sm btn-group-justified" : null;
 }
+
 <div class="@wrapperClasses"> @*имя переменной*@
-    @Html.ActionLink("Home", "List", "Product",
+    @Html.ActionLink("Home", "List", "Product", null,
         new
         {
             @class = horizontal ? "btn btn-default btn-sm" : "btn btn-block btn-default btn-lg"
