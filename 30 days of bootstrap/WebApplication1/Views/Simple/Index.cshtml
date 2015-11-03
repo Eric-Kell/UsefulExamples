@@ -1,0 +1,38 @@
+﻿@model WebApplication1.Models.Person
+
+@{
+    ViewBag.Title = "Index";
+    var likesMusic = Model.LikesMusic ? "active" : null;
+    var notAMusicFan = !Model.LikesMusic ? "active" : null;
+}
+
+<div class="page-header">
+    <h1>
+        Welcome to the Person Page <small>Read all about @Model.FirstName</small>
+    </h1>
+</div>
+
+<div>
+    <h3>@Model.FirstName @Model.LastName</h3>
+    <p>@Model.FirstName was born on @Model.BirthDate.ToString("D").</p>
+    <p>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-success btn-sm @likesMusic">
+                <input type="radio" name="options" id="option1"> Likes Music
+            </label>
+            <label class="btn btn-success btn-sm @notAMusicFan">
+                <input type="radio" name="options" id="option2"> Suffers in a Distorted Reality
+            </label>
+        </div>
+    </p>
+</div>
+
+<div>
+    <p>
+        Skills:
+        @foreach (var skill in Model.Skills)
+        {
+        <span class="label label-primary">@skill</span>
+        }
+    </p>
+</div>
