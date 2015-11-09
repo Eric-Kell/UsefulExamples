@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Tasks
@@ -16,16 +17,15 @@ namespace Tasks
 
     static void Main(string[] args)
     {
-      Task t = Task.Factory.StartNew(Speak);
-      Console.WriteLine("Waiting for completion");
-      // block the main thread, wait for the task to complete, and then exit
-      t.Wait(); 
-      Console.WriteLine("All Done");
+      Task.Factory
+      .StartNew(WhatTypeOfThreadAmI, TaskCreationOptions.LongRunning)
+      .Wait();
     }
 
-    private static void Speak()
+    private static void WhatTypeOfThreadAmI()
     {
-      Console.WriteLine("Hello World");
+      Console.WriteLine("I'm a {0} thread",
+      Thread.CurrentThread.IsThreadPoolThread ? "Thread Pool" : "Custom");
     }
   }
 }
