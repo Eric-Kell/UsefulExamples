@@ -11,39 +11,20 @@ using System.Linq;
 
 namespace Primer.Controllers
 {
-    [Route("api/[controller]")]
-    public class PageSizeController : Controller, ICustomController
+  [Route("api/[controller]")]
+  public class PageSizeController : Controller, ICustomController
   {
-
     private static string TargetUrl = "http://apress.com";
 
-    [HttpGet]
-    public Task<long> GetPageSize(CancellationToken cToken)
+    public async Task<long> GetPageSize(CancellationToken cToken)
     {
-      return Task<long>.Factory.StartNew(() =>
-      {
-        System.Net.Http.HttpClient wc = new HttpClient();
-        Stopwatch sw = Stopwatch.StartNew();
-        List<long> results = new List<long>();
-        for (int i = 0; i < 10; i++)
-        {
-          if (!cToken.IsCancellationRequested)
-          {
-            Debug.WriteLine("Making Request: {0}", i);
-            var x = wc.GetAsync(TargetUrl);
-            results.Add(i);
-          }
-          else
-          {
-            Debug.WriteLine("Cancelled");
-            return 0;
-          }
-        }
-        Debug.WriteLine("Elapsed ms: {0}", sw.ElapsedMilliseconds);
-        return (long) results.Average();
-      });
+      return 42;
 
-
+      System.Net.Http.HttpClient wc = new HttpClient();
+      Stopwatch sw = Stopwatch.StartNew();
+      byte[] apressData = await wc.GetByteArrayAsync(TargetUrl);
+      Debug.WriteLine("Elapsed ms: {0}", sw.ElapsedMilliseconds);
+      return apressData.Length;
     }
 
     public Task PostUrl(string newUrl, CancellationToken cToken)
@@ -51,6 +32,5 @@ namespace Primer.Controllers
       TargetUrl = newUrl;
       return Task.FromResult<object>(null);
     }
-
   }
 }

@@ -7,6 +7,11 @@
     <title>Primer</title>
 </head>
 <body>
-    <h2>Content will be added here</h2>
+    <div class="alert alert-success">
+        <span data-bind="text: modelData"></span>
+    </div>
+    <button class="btn btn-primary" data-bind="click: sendRequest">
+        Send Request
+    </button>
 </body>
 </html>
