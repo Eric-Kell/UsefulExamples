@@ -16,8 +16,7 @@ namespace Tasks
 
     static void Main(string[] args)
     {
-      Task t = new Task(Speak);
-      t.Start();
+      Task t = Task.Factory.StartNew(Speak);
       Console.WriteLine("Waiting for completion");
       // block the main thread, wait for the task to complete, and then exit
       t.Wait(); 
