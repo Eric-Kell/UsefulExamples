@@ -9,9 +9,8 @@ namespace Tasks
 {
   public class DataImporter
   {
-    public void Import(object o)
+    public void Import(string directory)
     {
-      string directory = (string)o;
     }
   }
 
@@ -26,7 +25,8 @@ namespace Tasks
     private static void Main(string[] args)
     {
       var importer = new DataImporter();
-      Task.Factory.StartNew(importer.Import, @"C:\data");
+      string importDirectory = @"C:\data";
+      Task.Factory.StartNew(() => importer.Import(importDirectory));
     }
 
   }
