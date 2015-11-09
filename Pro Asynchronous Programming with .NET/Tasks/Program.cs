@@ -18,6 +18,10 @@ namespace Tasks
     {
       Task t = new Task(Speak);
       t.Start();
+      Console.WriteLine("Waiting for completion");
+      // block the main thread, wait for the task to complete, and then exit
+      t.Wait(); 
+      Console.WriteLine("All Done");
     }
 
     private static void Speak()
