@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 
 namespace Tasks
 {
+  public class DataImporter
+  {
+    public void Import(object o)
+    {
+      string directory = (string)o;
+    }
+  }
+
   class Program
   {
 
@@ -15,17 +23,11 @@ namespace Tasks
     завершится не дожидаясь окончания такски из BackGround
     */
 
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-      Task.Factory
-      .StartNew(WhatTypeOfThreadAmI, TaskCreationOptions.LongRunning)
-      .Wait();
+      var importer = new DataImporter();
+      Task.Factory.StartNew(importer.Import, @"C:\data");
     }
 
-    private static void WhatTypeOfThreadAmI()
-    {
-      Console.WriteLine("I'm a {0} thread",
-      Thread.CurrentThread.IsThreadPoolThread ? "Thread Pool" : "Custom");
-    }
   }
 }
