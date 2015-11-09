@@ -8,6 +8,12 @@ namespace Tasks
 {
   class Program
   {
+
+    /*
+    Суть в том, что Task делается в BackGround и если нету никаких ForeGround, то прога
+    завершится не дожидаясь окончания такски из BackGround
+    */
+
     static void Main(string[] args)
     {
       Task t = new Task(Speak);
