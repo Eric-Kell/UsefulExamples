@@ -10,35 +10,31 @@ using System.Threading.Tasks;
 
 namespace Tasks
 {
-
   class Program
   {
-    static void Main(string[] args)
+    public interface IImport
     {
-      Task<string> downloadTask = DownloadWebPageAsync("http://xvideos.com");
-      while (!downloadTask.IsCompleted)
+      Task ImportXmlFilesAsync(string dataDirectory);
+      Task ImportXmlFilesAsync(string dataDirectory, CancellationToken ct);
+    }
+
+    public static void DataImport(IImport import)
+    {
+      var tcs = new CancellationTokenSource();
+      CancellationToken ct = tcs.Token;
+      Task importTask = import.ImportXmlFilesAsync(@"C:\data", ct);
+      while (!importTask.IsCompleted)
       {
         Console.Write(".");
+        if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
+        {
+          tcs.Cancel();
+        }
         Thread.Sleep(250);
       }
-      Console.WriteLine(downloadTask.Result);
     }
 
-    private static Task<string> DownloadWebPageAsync(string url)
-    {
-      return Task.Factory.StartNew(() => DownloadWebPage(url));
-    }
 
-    private static string DownloadWebPage(string url)
-    {
-      WebRequest request = WebRequest.Create(url);
-      WebResponse response = request.GetResponse();
-      var reader = new StreamReader(response.GetResponseStream());
-      {
-        // this will return the content of the web page
-        return reader.ReadToEnd();
-      }
-    }
 
   }
 }
