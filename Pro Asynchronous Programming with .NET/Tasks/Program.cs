@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,26 +13,17 @@ namespace Tasks
 {
   class Program
   {
-    public interface IImport
+    private static void Main()
     {
-      Task ImportXmlFilesAsync(string dataDirectory);
-      Task ImportXmlFilesAsync(string dataDirectory, CancellationToken ct);
-    }
-
-    public static void DataImport(IImport import)
-    {
-      var tcs = new CancellationTokenSource();
-      CancellationToken ct = tcs.Token;
-      Task importTask = import.ImportXmlFilesAsync(@"C:\data", ct);
-      while (!importTask.IsCompleted)
+      Task<int> firstTask = Task.Factory.StartNew<int>(() =>
       {
-        Console.Write(".");
-        if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
-        {
-          tcs.Cancel();
-        }
-        Thread.Sleep(250);
-      }
+        Console.WriteLine("First Task");
+        return 42;
+      });
+
+      Task secondTask = firstTask
+        .ContinueWith(ft => Console.WriteLine("Second Task, First task returned {0}", ft.Result));
+      secondTask.Wait();
     }
 
 
