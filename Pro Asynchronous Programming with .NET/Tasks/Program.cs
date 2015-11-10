@@ -15,15 +15,12 @@ namespace Tasks
   {
     private static void Main()
     {
-      Task<int> firstTask = Task.Factory.StartNew<int>(() =>
+      Task.Factory.StartNew(() =>
       {
-        Console.WriteLine("First Task");
-        return 42;
-      });
+        Task child = Task.Factory.StartNew(() => Console.WriteLine("Nested.."),
+        TaskCreationOptions.AttachedToParent);
+      }).Wait();
 
-      Task secondTask = firstTask
-        .ContinueWith(ft => Console.WriteLine("Second Task, First task returned {0}", ft.Result));
-      secondTask.Wait();
     }
 
 
