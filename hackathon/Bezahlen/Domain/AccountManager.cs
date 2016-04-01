@@ -38,5 +38,8 @@ namespace Domain
         await data.UserAccounts.AddAsync(userAccount);
       }
     }
+
+    public Account GetAccountById(int id)
+      => data.Accounts.Data.First(x => x.AccountID == id);
   }
 }

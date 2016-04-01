@@ -38,7 +38,15 @@ namespace UnitTests.Logic
       var user = data.Users.Data.First();
       await accountManager.BindUserToAccountByLogins(account, new List<string> {user.Login});
       var userAccount = data.UserAccounts.Data.First(x => x.User == user && x.Account == account);
-      Assert.AreEqual(amount +1, data.UserAccounts.Data.Count());
+      Assert.AreEqual(amount + 1, data.UserAccounts.Data.Count());
+    }
+
+    [TestMethod]
+    public void GetAccountByIdTest()
+    {
+      var account = data.Accounts.Data.First();
+      var result = accountManager.GetAccountById(account.AccountID);
+      Assert.AreSame(account, result);
     }
   }
 }

@@ -177,6 +177,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\AddUserToAccountInput.cs" />
     <Compile Include="Models\Account\CreateAccountInput.cs" />
     <Compile Include="Models\Account\CreateAccountOutput.cs" />
     <Compile Include="Models\User\EntranceInput.cs" />
