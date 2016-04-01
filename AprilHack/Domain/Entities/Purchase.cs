@@ -11,6 +11,6 @@ namespace Domain.Entities
     [JsonIgnore]
     public virtual IEnumerable<PurchasePayment> PurchasePayments { get; set; }
     [JsonIgnore]
-    public virtual IEnumerable<UserPurchase> UserPurchases { get; set; } 
+    public virtual IEnumerable<UserPurchase> UserPurchases { get; set; }
   }
 }

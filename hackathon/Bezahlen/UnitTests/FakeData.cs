@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.Data;
-using Domain.Entities;
+using Domain.Data.DB;
+using UserPurchase = Domain.Data.DB.UserPurchas;
 
 namespace UnitTests
 {

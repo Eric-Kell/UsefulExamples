@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Threading.Tasks;
+using Domain.Data.DB;
 
 namespace Domain.Data
 {
   public class EFRepository<TEntity> : IRepository<TEntity> where TEntity : class
   {
-    private DataContext context;
+    private Hac2112DBEntities context;
     private DbSet<TEntity> dbSet;
 
-    public EFRepository(DataContext c, IEnumerable<TEntity> d)
+    public EFRepository(Hac2112DBEntities c, DbSet<TEntity> d)
     {
       context = c;
       dbSet = context.Set<TEntity>();
-      Data = d;
+      Data = (IEnumerable<TEntity>) d;
     }
 
     public IEnumerable<TEntity> Data { get; }

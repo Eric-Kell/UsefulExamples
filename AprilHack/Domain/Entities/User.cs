@@ -10,6 +10,6 @@ namespace Domain.Entities
     public string Nickname { get; set; }
     public virtual IEnumerable<Payment> Payments { get; set; }
     public virtual IEnumerable<UserAccount> UserAccounts { get; set; }
-    public virtual IEnumerable<UserPurchase> UserPurchases { get; set; } 
+    public virtual IEnumerable<UserPurchase> UserPurchases { get; set; }
   }
 }

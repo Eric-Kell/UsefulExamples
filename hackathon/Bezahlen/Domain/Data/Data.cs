@@ -1,11 +1,19 @@
-﻿using Domain.Entities;
+﻿using Domain.Data.DB;
 using Domain.Services;
+using Account = Domain.Data.DB.Account;
+using AccountPayment = Domain.Data.DB.AccountPayment;
+using Payment = Domain.Data.DB.Payment;
+using Purchase = Domain.Data.DB.Purchase;
+using PurchasePayment = Domain.Data.DB.PurchasePayment;
+using User = Domain.Data.DB.User;
+using UserAccount = Domain.Data.DB.UserAccount;
+using UserPurchase = Domain.Data.DB.UserPurchas;
 
 namespace Domain.Data
 {
   public class Data : Singleton<Data>, IData
   {
-    private readonly DataContext _context = new DataContext();
+    private readonly Hac2112DBEntities _context = new Hac2112DBEntities();
 
     public IRepository<Account> Accounts { get; }
     public IRepository<AccountPayment> AccountPayments { get; }

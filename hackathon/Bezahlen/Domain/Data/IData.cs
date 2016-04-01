@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.Data.DB;
+using UserPurchase = Domain.Data.DB.UserPurchas;
 
 namespace Domain.Data
 {
