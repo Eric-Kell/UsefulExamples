@@ -173,6 +173,7 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +182,7 @@
     <Compile Include="Models\Account\CreateAccountInput.cs" />
     <Compile Include="Models\Account\CreateAccountOutput.cs" />
     <Compile Include="Models\Account\RemoveSelfFromAccountInput.cs" />
+    <Compile Include="Models\Payment\AddPaymentInput.cs" />
     <Compile Include="Models\User\EntranceInput.cs" />
     <Compile Include="Models\User\EntranceOutput.cs" />
     <Compile Include="Models\User\RegistrationInput.cs" />
