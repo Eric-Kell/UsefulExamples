@@ -5,14 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Hac2112DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="AccountPayments">
-          <Key>
-            <PropertyRef Name="AccountPaymentID" />
-          </Key>
-          <Property Name="AccountPaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AccountID" Type="int" Nullable="false" />
-          <Property Name="PaymentID" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="Accounts">
           <Key>
             <PropertyRef Name="AccountID" />
@@ -30,22 +22,7 @@
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="PurchasePayments">
-          <Key>
-            <PropertyRef Name="PurchasePaymentID" />
-          </Key>
-          <Property Name="PurchasePaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PurchaseID" Type="int" Nullable="false" />
-          <Property Name="PaymentID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Purchases">
-          <Key>
-            <PropertyRef Name="PurchaseID" />
-          </Key>
-          <Property Name="PurchaseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="AccountID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="UserAccounts">
           <Key>
@@ -54,14 +31,6 @@
           <Property Name="UserAccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="AccountID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="UserPurchases">
-          <Key>
-            <PropertyRef Name="UserPurchaseID" />
-          </Key>
-          <Property Name="UserPurchaseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PurchaseID" Type="int" Nullable="false" />
-          <Property Name="UserID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -72,31 +41,17 @@
           <Property Name="Password" Type="nvarchar(max)" />
           <Property Name="Nickname" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK_dbo_AccountPayments_dbo_Accounts_AccountID">
+        <Association Name="FK_dbo_Payments_dbo_Accounts_AccountID">
           <End Role="Accounts" Type="Self.Accounts" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="AccountPayments" Type="Self.AccountPayments" Multiplicity="*" />
+          <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Accounts">
               <PropertyRef Name="AccountID" />
             </Principal>
-            <Dependent Role="AccountPayments">
+            <Dependent Role="Payments">
               <PropertyRef Name="AccountID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AccountPayments_dbo_Payments_PaymentID">
-          <End Role="Payments" Type="Self.Payments" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AccountPayments" Type="Self.AccountPayments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Payments">
-              <PropertyRef Name="PaymentID" />
-            </Principal>
-            <Dependent Role="AccountPayments">
-              <PropertyRef Name="PaymentID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -111,34 +66,6 @@
             </Principal>
             <Dependent Role="Payments">
               <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_PurchasePayments_dbo_Payments_PaymentID">
-          <End Role="Payments" Type="Self.Payments" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="PurchasePayments" Type="Self.PurchasePayments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Payments">
-              <PropertyRef Name="PaymentID" />
-            </Principal>
-            <Dependent Role="PurchasePayments">
-              <PropertyRef Name="PaymentID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID">
-          <End Role="Purchases" Type="Self.Purchases" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="PurchasePayments" Type="Self.PurchasePayments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Purchases">
-              <PropertyRef Name="PurchaseID" />
-            </Principal>
-            <Dependent Role="PurchasePayments">
-              <PropertyRef Name="PurchaseID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -170,62 +97,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_dbo_UserPurchases_dbo_Purchases_PurchaseID">
-          <End Role="Purchases" Type="Self.Purchases" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="UserPurchases" Type="Self.UserPurchases" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Purchases">
-              <PropertyRef Name="PurchaseID" />
-            </Principal>
-            <Dependent Role="UserPurchases">
-              <PropertyRef Name="PurchaseID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_UserPurchases_dbo_Users_UserID">
-          <End Role="Users" Type="Self.Users" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="UserPurchases" Type="Self.UserPurchases" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="UserPurchases">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="Hac2112DBModelStoreContainer">
-          <EntitySet Name="AccountPayments" EntityType="Self.AccountPayments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PurchasePayments" EntityType="Self.PurchasePayments" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Purchases" EntityType="Self.Purchases" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserAccounts" EntityType="Self.UserAccounts" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserPurchases" EntityType="Self.UserPurchases" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_dbo_AccountPayments_dbo_Accounts_AccountID" Association="Self.FK_dbo_AccountPayments_dbo_Accounts_AccountID">
+          <AssociationSet Name="FK_dbo_Payments_dbo_Accounts_AccountID" Association="Self.FK_dbo_Payments_dbo_Accounts_AccountID">
             <End Role="Accounts" EntitySet="Accounts" />
-            <End Role="AccountPayments" EntitySet="AccountPayments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AccountPayments_dbo_Payments_PaymentID" Association="Self.FK_dbo_AccountPayments_dbo_Payments_PaymentID">
             <End Role="Payments" EntitySet="Payments" />
-            <End Role="AccountPayments" EntitySet="AccountPayments" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Payments_dbo_Users_UserID" Association="Self.FK_dbo_Payments_dbo_Users_UserID">
             <End Role="Users" EntitySet="Users" />
             <End Role="Payments" EntitySet="Payments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_PurchasePayments_dbo_Payments_PaymentID" Association="Self.FK_dbo_PurchasePayments_dbo_Payments_PaymentID">
-            <End Role="Payments" EntitySet="Payments" />
-            <End Role="PurchasePayments" EntitySet="PurchasePayments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID" Association="Self.FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID">
-            <End Role="Purchases" EntitySet="Purchases" />
-            <End Role="PurchasePayments" EntitySet="PurchasePayments" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_UserAccounts_dbo_Accounts_AccountID" Association="Self.FK_dbo_UserAccounts_dbo_Accounts_AccountID">
             <End Role="Accounts" EntitySet="Accounts" />
@@ -235,30 +118,12 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="UserAccounts" EntitySet="UserAccounts" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_UserPurchases_dbo_Purchases_PurchaseID" Association="Self.FK_dbo_UserPurchases_dbo_Purchases_PurchaseID">
-            <End Role="Purchases" EntitySet="Purchases" />
-            <End Role="UserPurchases" EntitySet="UserPurchases" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_UserPurchases_dbo_Users_UserID" Association="Self.FK_dbo_UserPurchases_dbo_Users_UserID">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="UserPurchases" EntitySet="UserPurchases" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Hac2112DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="AccountPayment">
-          <Key>
-            <PropertyRef Name="AccountPaymentID" />
-          </Key>
-          <Property Name="AccountPaymentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AccountID" Type="Int32" Nullable="false" />
-          <Property Name="PaymentID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="Self.FK_dbo_AccountPayments_dbo_Accounts_AccountID" FromRole="AccountPayments" ToRole="Accounts" />
-          <NavigationProperty Name="Payment" Relationship="Self.FK_dbo_AccountPayments_dbo_Payments_PaymentID" FromRole="AccountPayments" ToRole="Payments" />
-        </EntityType>
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="AccountID" />
@@ -266,7 +131,7 @@
           <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AccountPayments" Relationship="Self.FK_dbo_AccountPayments_dbo_Accounts_AccountID" FromRole="Accounts" ToRole="AccountPayments" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK_dbo_Payments_dbo_Accounts_AccountID" FromRole="Accounts" ToRole="Payments" />
           <NavigationProperty Name="UserAccounts" Relationship="Self.FK_dbo_UserAccounts_dbo_Accounts_AccountID" FromRole="Accounts" ToRole="UserAccounts" />
         </EntityType>
         <EntityType Name="Payment">
@@ -278,29 +143,9 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Value" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="AccountPayments" Relationship="Self.FK_dbo_AccountPayments_dbo_Payments_PaymentID" FromRole="Payments" ToRole="AccountPayments" />
+          <Property Name="AccountID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK_dbo_Payments_dbo_Accounts_AccountID" FromRole="Payments" ToRole="Accounts" />
           <NavigationProperty Name="User" Relationship="Self.FK_dbo_Payments_dbo_Users_UserID" FromRole="Payments" ToRole="Users" />
-          <NavigationProperty Name="PurchasePayments" Relationship="Self.FK_dbo_PurchasePayments_dbo_Payments_PaymentID" FromRole="Payments" ToRole="PurchasePayments" />
-        </EntityType>
-        <EntityType Name="PurchasePayment">
-          <Key>
-            <PropertyRef Name="PurchasePaymentID" />
-          </Key>
-          <Property Name="PurchasePaymentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PurchaseID" Type="Int32" Nullable="false" />
-          <Property Name="PaymentID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Payment" Relationship="Self.FK_dbo_PurchasePayments_dbo_Payments_PaymentID" FromRole="PurchasePayments" ToRole="Payments" />
-          <NavigationProperty Name="Purchase" Relationship="Self.FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID" FromRole="PurchasePayments" ToRole="Purchases" />
-        </EntityType>
-        <EntityType Name="Purchase">
-          <Key>
-            <PropertyRef Name="PurchaseID" />
-          </Key>
-          <Property Name="PurchaseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PurchasePayments" Relationship="Self.FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID" FromRole="Purchases" ToRole="PurchasePayments" />
-          <NavigationProperty Name="UserPurchases" Relationship="Self.FK_dbo_UserPurchases_dbo_Purchases_PurchaseID" FromRole="Purchases" ToRole="UserPurchases" />
         </EntityType>
         <EntityType Name="UserAccount">
           <Key>
@@ -312,16 +157,6 @@
           <NavigationProperty Name="Account" Relationship="Self.FK_dbo_UserAccounts_dbo_Accounts_AccountID" FromRole="UserAccounts" ToRole="Accounts" />
           <NavigationProperty Name="User" Relationship="Self.FK_dbo_UserAccounts_dbo_Users_UserID" FromRole="UserAccounts" ToRole="Users" />
         </EntityType>
-        <EntityType Name="UserPurchas">
-          <Key>
-            <PropertyRef Name="UserPurchaseID" />
-          </Key>
-          <Property Name="UserPurchaseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PurchaseID" Type="Int32" Nullable="false" />
-          <Property Name="UserID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Purchase" Relationship="Self.FK_dbo_UserPurchases_dbo_Purchases_PurchaseID" FromRole="UserPurchases" ToRole="Purchases" />
-          <NavigationProperty Name="User" Relationship="Self.FK_dbo_UserPurchases_dbo_Users_UserID" FromRole="UserPurchases" ToRole="Users" />
-        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
@@ -332,33 +167,18 @@
           <Property Name="Nickname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Payments" Relationship="Self.FK_dbo_Payments_dbo_Users_UserID" FromRole="Users" ToRole="Payments" />
           <NavigationProperty Name="UserAccounts" Relationship="Self.FK_dbo_UserAccounts_dbo_Users_UserID" FromRole="Users" ToRole="UserAccounts" />
-          <NavigationProperty Name="UserPurchases" Relationship="Self.FK_dbo_UserPurchases_dbo_Users_UserID" FromRole="Users" ToRole="UserPurchases" />
         </EntityType>
-        <Association Name="FK_dbo_AccountPayments_dbo_Accounts_AccountID">
+        <Association Name="FK_dbo_Payments_dbo_Accounts_AccountID">
           <End Role="Accounts" Type="Self.Account" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="AccountPayments" Type="Self.AccountPayment" Multiplicity="*" />
+          <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Accounts">
               <PropertyRef Name="AccountID" />
             </Principal>
-            <Dependent Role="AccountPayments">
+            <Dependent Role="Payments">
               <PropertyRef Name="AccountID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AccountPayments_dbo_Payments_PaymentID">
-          <End Role="Payments" Type="Self.Payment" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AccountPayments" Type="Self.AccountPayment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Payments">
-              <PropertyRef Name="PaymentID" />
-            </Principal>
-            <Dependent Role="AccountPayments">
-              <PropertyRef Name="PaymentID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -390,48 +210,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_dbo_PurchasePayments_dbo_Payments_PaymentID">
-          <End Role="Payments" Type="Self.Payment" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="PurchasePayments" Type="Self.PurchasePayment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Payments">
-              <PropertyRef Name="PaymentID" />
-            </Principal>
-            <Dependent Role="PurchasePayments">
-              <PropertyRef Name="PaymentID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID">
-          <End Role="Purchases" Type="Self.Purchase" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="PurchasePayments" Type="Self.PurchasePayment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Purchases">
-              <PropertyRef Name="PurchaseID" />
-            </Principal>
-            <Dependent Role="PurchasePayments">
-              <PropertyRef Name="PurchaseID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_UserPurchases_dbo_Purchases_PurchaseID">
-          <End Role="Purchases" Type="Self.Purchase" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="UserPurchases" Type="Self.UserPurchas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Purchases">
-              <PropertyRef Name="PurchaseID" />
-            </Principal>
-            <Dependent Role="UserPurchases">
-              <PropertyRef Name="PurchaseID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_dbo_UserAccounts_dbo_Users_UserID">
           <End Role="Users" Type="Self.User" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -446,36 +224,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_dbo_UserPurchases_dbo_Users_UserID">
-          <End Role="Users" Type="Self.User" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="UserPurchases" Type="Self.UserPurchas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="UserPurchases">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="Hac2112DBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AccountPayments" EntityType="Self.AccountPayment" />
+        <EntityContainer Name="Hac2112DBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Payments" EntityType="Self.Payment" />
-          <EntitySet Name="PurchasePayments" EntityType="Self.PurchasePayment" />
-          <EntitySet Name="Purchases" EntityType="Self.Purchase" />
           <EntitySet Name="UserAccounts" EntityType="Self.UserAccount" />
-          <EntitySet Name="UserPurchases" EntityType="Self.UserPurchas" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK_dbo_AccountPayments_dbo_Accounts_AccountID" Association="Self.FK_dbo_AccountPayments_dbo_Accounts_AccountID">
+          <AssociationSet Name="FK_dbo_Payments_dbo_Accounts_AccountID" Association="Self.FK_dbo_Payments_dbo_Accounts_AccountID">
             <End Role="Accounts" EntitySet="Accounts" />
-            <End Role="AccountPayments" EntitySet="AccountPayments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AccountPayments_dbo_Payments_PaymentID" Association="Self.FK_dbo_AccountPayments_dbo_Payments_PaymentID">
             <End Role="Payments" EntitySet="Payments" />
-            <End Role="AccountPayments" EntitySet="AccountPayments" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_UserAccounts_dbo_Accounts_AccountID" Association="Self.FK_dbo_UserAccounts_dbo_Accounts_AccountID">
             <End Role="Accounts" EntitySet="Accounts" />
@@ -485,25 +241,9 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Payments" EntitySet="Payments" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_PurchasePayments_dbo_Payments_PaymentID" Association="Self.FK_dbo_PurchasePayments_dbo_Payments_PaymentID">
-            <End Role="Payments" EntitySet="Payments" />
-            <End Role="PurchasePayments" EntitySet="PurchasePayments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID" Association="Self.FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID">
-            <End Role="Purchases" EntitySet="Purchases" />
-            <End Role="PurchasePayments" EntitySet="PurchasePayments" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_UserPurchases_dbo_Purchases_PurchaseID" Association="Self.FK_dbo_UserPurchases_dbo_Purchases_PurchaseID">
-            <End Role="Purchases" EntitySet="Purchases" />
-            <End Role="UserPurchases" EntitySet="UserPurchases" />
-          </AssociationSet>
           <AssociationSet Name="FK_dbo_UserAccounts_dbo_Users_UserID" Association="Self.FK_dbo_UserAccounts_dbo_Users_UserID">
             <End Role="Users" EntitySet="Users" />
             <End Role="UserAccounts" EntitySet="UserAccounts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_UserPurchases_dbo_Users_UserID" Association="Self.FK_dbo_UserPurchases_dbo_Users_UserID">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="UserPurchases" EntitySet="UserPurchases" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -511,16 +251,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Hac2112DBModelStoreContainer" CdmEntityContainer="Hac2112DBEntities">
-          <EntitySetMapping Name="AccountPayments">
-            <EntityTypeMapping TypeName="Hac2112DBModel.AccountPayment">
-              <MappingFragment StoreEntitySet="AccountPayments">
-                <ScalarProperty Name="AccountPaymentID" ColumnName="AccountPaymentID" />
-                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-                <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="Hac2112DBModelStoreContainer" CdmEntityContainer="Hac2112DBEntities1">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="Hac2112DBModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
@@ -538,24 +269,7 @@
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Value" ColumnName="Value" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PurchasePayments">
-            <EntityTypeMapping TypeName="Hac2112DBModel.PurchasePayment">
-              <MappingFragment StoreEntitySet="PurchasePayments">
-                <ScalarProperty Name="PurchasePaymentID" ColumnName="PurchasePaymentID" />
-                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
-                <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Purchases">
-            <EntityTypeMapping TypeName="Hac2112DBModel.Purchase">
-              <MappingFragment StoreEntitySet="Purchases">
-                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -565,15 +279,6 @@
                 <ScalarProperty Name="UserAccountID" ColumnName="UserAccountID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserPurchases">
-            <EntityTypeMapping TypeName="Hac2112DBModel.UserPurchas">
-              <MappingFragment StoreEntitySet="UserPurchases">
-                <ScalarProperty Name="UserPurchaseID" ColumnName="UserPurchaseID" />
-                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

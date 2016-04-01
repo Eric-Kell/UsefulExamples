@@ -8,7 +8,7 @@ namespace UnitTests.API
 {
   public class APITest
   {
-    protected Hac2112DBEntities context = new Hac2112DBEntities();
+    protected Hac2112DBEntities1 context = new Hac2112DBEntities1();
     protected string serverUrl = "http://hac2112.azurewebsites.net";
   }
 }

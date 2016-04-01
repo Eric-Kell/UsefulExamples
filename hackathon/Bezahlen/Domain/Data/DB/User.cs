@@ -19,7 +19,6 @@ namespace Domain.Data.DB
         {
             this.Payments = new HashSet<Payment>();
             this.UserAccounts = new HashSet<UserAccount>();
-            this.UserPurchases = new HashSet<UserPurchas>();
         }
     
         public int UserID { get; set; }
@@ -31,7 +30,5 @@ namespace Domain.Data.DB
         public virtual ICollection<Payment> Payments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserAccount> UserAccounts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserPurchas> UserPurchases { get; set; }
     }
 }

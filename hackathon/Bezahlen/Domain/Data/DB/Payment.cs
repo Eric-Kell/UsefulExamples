@@ -14,23 +14,14 @@ namespace Domain.Data.DB
     
     public partial class Payment
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Payment()
-        {
-            this.AccountPayments = new HashSet<AccountPayment>();
-            this.PurchasePayments = new HashSet<PurchasePayment>();
-        }
-    
         public int PaymentID { get; set; }
         public string Text { get; set; }
         public System.DateTime Date { get; set; }
         public decimal Value { get; set; }
         public int UserID { get; set; }
+        public int AccountID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AccountPayment> AccountPayments { get; set; }
+        public virtual Account Account { get; set; }
         public virtual User User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchasePayment> PurchasePayments { get; set; }
     }
 }

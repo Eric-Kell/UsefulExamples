@@ -17,7 +17,7 @@ namespace Domain.Data.DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Account()
         {
-            this.AccountPayments = new HashSet<AccountPayment>();
+            this.Payments = new HashSet<Payment>();
             this.UserAccounts = new HashSet<UserAccount>();
         }
     
@@ -26,7 +26,7 @@ namespace Domain.Data.DB
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AccountPayment> AccountPayments { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserAccount> UserAccounts { get; set; }
     }

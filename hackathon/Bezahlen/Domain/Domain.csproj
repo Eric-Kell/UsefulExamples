@@ -60,9 +60,6 @@
     <Compile Include="Data\DB\Account.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\DB\AccountPayment.cs">
-      <DependentUpon>ModelData.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\DB\ModelData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,19 +78,10 @@
     <Compile Include="Data\DB\Payment.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\DB\Purchase.cs">
-      <DependentUpon>ModelData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\DB\PurchasePayment.cs">
-      <DependentUpon>ModelData.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\DB\User.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\DB\UserAccount.cs">
-      <DependentUpon>ModelData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\DB\UserPurchas.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\EFRepository.cs" />
@@ -106,11 +94,11 @@
     <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <EntityDeploy Include="Data\DB\ModelData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelData.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.config" />
     <None Include="Data\DB\ModelData.edmx.diagram">
       <DependentUpon>ModelData.edmx</DependentUpon>
     </None>
@@ -119,7 +107,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Data\DB\ModelData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

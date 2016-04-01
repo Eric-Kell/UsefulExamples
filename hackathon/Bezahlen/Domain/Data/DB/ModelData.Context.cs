@@ -13,10 +13,10 @@ namespace Domain.Data.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Hac2112DBEntities : DbContext
+    public partial class Hac2112DBEntities1 : DbContext
     {
-        public Hac2112DBEntities()
-            : base("name=Hac2112DBEntities")
+        public Hac2112DBEntities1()
+            : base("name=Hac2112DBEntities1")
         {
         }
     
@@ -25,13 +25,9 @@ namespace Domain.Data.DB
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AccountPayment> AccountPayments { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<PurchasePayment> PurchasePayments { get; set; }
-        public virtual DbSet<Purchase> Purchases { get; set; }
         public virtual DbSet<UserAccount> UserAccounts { get; set; }
-        public virtual DbSet<UserPurchas> UserPurchases { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

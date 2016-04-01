@@ -4,24 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="99b85449afa44e369d55354bca3b97b5" Name="Diagram1">
-        <EntityTypeShape EntityType="Hac2112DBModel.AccountPayment" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.Account" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.Payment" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.PurchasePayment" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.Purchase" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.UserAccount" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.UserPurchas" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.User" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <AssociationConnector Association="Hac2112DBModel.FK_dbo_AccountPayments_dbo_Accounts_AccountID" ManuallyRouted="false" />
-        <AssociationConnector Association="Hac2112DBModel.FK_dbo_AccountPayments_dbo_Payments_PaymentID" ManuallyRouted="false" />
+      <Diagram DiagramId="8b750d7d52cd469e8c885511312fe052" Name="Diagram1">
+        <EntityTypeShape EntityType="Hac2112DBModel.Account" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.Payment" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.UserAccount" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.User" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="Hac2112DBModel.FK_dbo_Payments_dbo_Accounts_AccountID" ManuallyRouted="false" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_UserAccounts_dbo_Accounts_AccountID" ManuallyRouted="false" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_Payments_dbo_Users_UserID" ManuallyRouted="false" />
-        <AssociationConnector Association="Hac2112DBModel.FK_dbo_PurchasePayments_dbo_Payments_PaymentID" ManuallyRouted="false" />
-        <AssociationConnector Association="Hac2112DBModel.FK_dbo_PurchasePayments_dbo_Purchases_PurchaseID" ManuallyRouted="false" />
-        <AssociationConnector Association="Hac2112DBModel.FK_dbo_UserPurchases_dbo_Purchases_PurchaseID" ManuallyRouted="false" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_UserAccounts_dbo_Users_UserID" ManuallyRouted="false" />
-        <AssociationConnector Association="Hac2112DBModel.FK_dbo_UserPurchases_dbo_Users_UserID" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
