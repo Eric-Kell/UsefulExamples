@@ -44,5 +44,15 @@ namespace WebApplication.Controllers
       await accountManager.BindUserToAccountByLogins(account, new List<string> { model.Login});
     }
 
+    [Route("api/wallet/RemoveSelfFromWallet")]
+    [HttpPost]
+    public async Task RemoveSelfFromAccount(RemoveSelfFromAccountInput model)
+    {
+      var userId = int.Parse(Request.Headers.GetValues("Token").First());
+      var user = userManager.GetUserById(userId);
+      var account = accountManager.GetAccountById(model.AccountId);
+      await accountManager.RemoveUserFromAccount(user, account);
+    }
+
   }
 }

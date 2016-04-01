@@ -49,5 +49,13 @@ namespace UnitTests.Logic
       var result = userManager.GetLoginById(user.UserID);
       Assert.AreEqual(result, user.Login);
     }
+
+    [TestMethod]
+    public void GetUserByIdTest()
+    {
+      var user = data.Users.Data.First();
+      var result = userManager.GetUserById(user.UserID);
+      Assert.AreSame(user, result);
+    }
   }
 }

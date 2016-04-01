@@ -48,5 +48,17 @@ namespace UnitTests.Logic
       var result = accountManager.GetAccountById(account.AccountID);
       Assert.AreSame(account, result);
     }
+
+    [TestMethod]
+    public async Task RemoveUserFromAccountTest()
+    {
+      var account = data.Accounts.Data.First();
+      var user = data.Users.Data.First();
+      var amount = data.UserAccounts.Data.Count();
+      Assert.AreNotEqual(null, data.UserAccounts.Data.FirstOrDefault(x => x.User == user && x.Account == account));
+      await accountManager.RemoveUserFromAccount(user, account);
+      Assert.AreEqual(amount - 1, data.UserAccounts.Data.Count());
+      Assert.AreEqual(null, data.UserAccounts.Data.FirstOrDefault(x => x.User == user && x.Account == account));
+    }
   }
 }
