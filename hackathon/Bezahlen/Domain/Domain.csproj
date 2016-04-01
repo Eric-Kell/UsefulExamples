@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountManager.cs" />
     <Compile Include="Data\Data.cs" />
     <Compile Include="Data\DB\Account.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
