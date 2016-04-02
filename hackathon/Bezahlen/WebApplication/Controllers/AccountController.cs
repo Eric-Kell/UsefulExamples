@@ -74,12 +74,10 @@ namespace WebApplication.Controllers
         // get payments
         var payments = paymentManager.GetPaymentsByAccount(account).Select(x => new PaymentExport
         {
-          AccountID = x.AccountID,
           Date = x.Date,
-          PaymentID = x.PaymentID,
           Text = x.Text,
-          UserID = x.UserID,
-          Value = x.Value
+          Login = x.User.Login,
+          Value = Convert.ToInt32(x.Value)
         });
 
         // calc balance
