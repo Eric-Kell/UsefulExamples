@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Domain.Data;
 using Domain.Data.DB;
@@ -16,28 +15,26 @@ namespace Domain
       data = d;
     }
 
-    public async Task<Account> CreateAccount( string name)
+    public async Task<Account> CreateAccount( string name, int sum)
     {
       var account = new Account
       {
-        Name = name
+        Name = name,
+        TargetSum = sum
       };
       await data.Accounts.AddAsync(account);
       return account;
     }
 
-    public async Task BindUserToAccountByLogins(Account account, List<string> logins)
+    public async Task BindUserToAccountByUserId(Account account, int userId)
     {
-      foreach (var userAccount in logins.
-        Select(login => data.Users.Data.First(x => x.Login == login)).
-        Select(user => new UserAccount
-        {
-          Account = account,
-          User = user
-        }))
+      var user = data.Users.Data.First(x => x.UserID == userId);
+      var userAccount = new UserAccount
       {
-        await data.UserAccounts.AddAsync(userAccount);
-      }
+        Account = account,
+        User = user
+      };
+      await data.UserAccounts.AddAsync(userAccount);
     }
 
     public Account GetAccountById(int id)

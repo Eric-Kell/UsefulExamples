@@ -23,11 +23,13 @@ namespace UnitTests.Logic
     {
       int amount = data.Accounts.Data.Count();
       string name = MoqDataGenerator.GetRandomString(10);
-      var account = await accountManager.CreateAccount(name);
+      int sum = MoqDataGenerator.GetRandomNumber(10, 100);
+      var account = await accountManager.CreateAccount(name, sum);
       var last = data.Accounts.Data.Last();
       Assert.AreSame(account, last);
       Assert.AreEqual(amount + 1, data.Accounts.Data.Count());
       Assert.AreEqual(name, last.Name);
+      Assert.AreEqual(sum, last.TargetSum);
     }
 
     [TestMethod]
@@ -36,7 +38,7 @@ namespace UnitTests.Logic
       var account = data.Accounts.Data.First();
       int amount = data.UserAccounts.Data.Count();
       var user = data.Users.Data.First();
-      await accountManager.BindUserToAccountByLogins(account, new List<string> {user.Login});
+      await accountManager.BindUserToAccountByUserId(account, user.UserID);
       var userAccount = data.UserAccounts.Data.First(x => x.User == user && x.Account == account);
       Assert.AreEqual(amount + 1, data.UserAccounts.Data.Count());
     }

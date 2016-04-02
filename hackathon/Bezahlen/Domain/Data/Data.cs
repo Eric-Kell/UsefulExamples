@@ -9,7 +9,7 @@ namespace Domain.Data
 {
   public class Data : Singleton<Data>, IData
   {
-    private readonly Hac2112DBEntities1 _context = new Hac2112DBEntities1();
+    private readonly Hac2112DBEntities2 _context = new Hac2112DBEntities2();
 
     public IRepository<Account> Accounts { get; }
     public IRepository<Payment> Payments { get; }

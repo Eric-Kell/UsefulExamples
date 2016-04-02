@@ -12,6 +12,8 @@
           <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" />
           <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="TargetSum" Type="int" />
+          <Property Name="StartDay" Type="int" />
         </EntityType>
         <EntityType Name="Payments">
           <Key>
@@ -131,6 +133,8 @@
           <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TargetSum" Type="Int32" />
+          <Property Name="StartDay" Type="Int32" />
           <NavigationProperty Name="Payments" Relationship="Self.FK_dbo_Payments_dbo_Accounts_AccountID" FromRole="Accounts" ToRole="Payments" />
           <NavigationProperty Name="UserAccounts" Relationship="Self.FK_dbo_UserAccounts_dbo_Accounts_AccountID" FromRole="Accounts" ToRole="UserAccounts" />
         </EntityType>
@@ -224,7 +228,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Hac2112DBEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Hac2112DBEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Payments" EntityType="Self.Payment" />
           <EntitySet Name="UserAccounts" EntityType="Self.UserAccount" />
@@ -251,13 +255,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Hac2112DBModelStoreContainer" CdmEntityContainer="Hac2112DBEntities1">
+        <EntityContainerMapping StorageEntityContainer="Hac2112DBModelStoreContainer" CdmEntityContainer="Hac2112DBEntities2">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="Hac2112DBModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TargetSum" ColumnName="TargetSum" />
+                <ScalarProperty Name="StartDay" ColumnName="StartDay" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -14,7 +14,7 @@ namespace UnitTests
   [TestClass]
   public class DataBaseTest
   {
-    private readonly Hac2112DBEntities1 _context = new Hac2112DBEntities1();
+    private readonly Hac2112DBEntities2 _context = new Hac2112DBEntities2();
 
     // создадим тестовые данные
 

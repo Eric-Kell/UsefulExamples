@@ -13,10 +13,10 @@ namespace Domain.Data.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Hac2112DBEntities1 : DbContext
+    public partial class Hac2112DBEntities2 : DbContext
     {
-        public Hac2112DBEntities1()
-            : base("name=Hac2112DBEntities1")
+        public Hac2112DBEntities2()
+            : base("name=Hac2112DBEntities2")
         {
         }
     

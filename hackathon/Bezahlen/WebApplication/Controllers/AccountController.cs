@@ -26,23 +26,22 @@ namespace WebApplication.Controllers
     public async Task<CreateAccountOutput> CreateAccount(CreateAccountInput model)
     {
       var userId = int.Parse(Request.Headers.GetValues("Token").First());
-      var account = await accountManager.CreateAccount(model.Name);
-      var logins = model.Logins.ToList();
-      logins.Add(userManager.GetLoginById(userId));
-      await accountManager.BindUserToAccountByLogins(account, logins);
+      var account = await accountManager.CreateAccount(model.Name, model.TargetSum);
+      await accountManager.BindUserToAccountByUserId(account, userId);
       return new CreateAccountOutput
       {
         WalletId = account.AccountID
       };
     }
 
-    [Route("api/wallet/AddUserToWallet")]
-    [HttpPost]
-    public async Task AddUserToAccount(AddUserToAccountInput model)
-    {
-      var account = accountManager.GetAccountById(model.AccountId);
-      await accountManager.BindUserToAccountByLogins(account, new List<string> { model.Login});
-    }
+    //[Route("api/wallet/AddUserToWallet")]
+    //[HttpPost]
+    //public async Task AddUserToAccount(AddUserToAccountInput model)
+    //{
+    //  var userId = int.Parse(Request.Headers.GetValues("Token").First());
+    //  var account = accountManager.GetAccountById(model.AccountId);
+    //  await accountManager.BindUserToAccountByUserId(account, new List<string> { model.Login });
+    //}
 
     [Route("api/wallet/RemoveSelfFromWallet")]
     [HttpPost]
