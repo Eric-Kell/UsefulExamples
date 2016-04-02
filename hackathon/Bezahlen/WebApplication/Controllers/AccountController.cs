@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -30,7 +31,13 @@ namespace WebApplication.Controllers
       await accountManager.BindUserToAccountByUserId(account, userId);
       return new CreateAccountOutput
       {
-        WalletId = account.AccountID
+        WalletId = account.AccountID,
+        Name = account.Name,
+        Balance = 0,
+        TargetSum = (int) account.TargetSum,
+        StartDay = DateTime.Now.Day,
+        Logins = new List<string>(),
+        Payments = new List<string>()
       };
     }
 
@@ -43,15 +50,15 @@ namespace WebApplication.Controllers
     //  await accountManager.BindUserToAccountByUserId(account, new List<string> { model.Login });
     //}
 
-    [Route("api/wallet/RemoveSelfFromWallet")]
-    [HttpPost]
-    public async Task RemoveSelfFromAccount(RemoveSelfFromAccountInput model)
-    {
-      var userId = int.Parse(Request.Headers.GetValues("Token").First());
-      var user = userManager.GetUserById(userId);
-      var account = accountManager.GetAccountById(model.AccountId);
-      await accountManager.RemoveUserFromAccount(user, account);
-    }
+    //[Route("api/wallet/RemoveSelfFromWallet")]
+    //[HttpPost]
+    //public async Task RemoveSelfFromAccount(RemoveSelfFromAccountInput model)
+    //{
+    //  var userId = int.Parse(Request.Headers.GetValues("Token").First());
+    //  var user = userManager.GetUserById(userId);
+    //  var account = accountManager.GetAccountById(model.AccountId);
+    //  await accountManager.RemoveUserFromAccount(user, account);
+    //}
 
   }
 }
