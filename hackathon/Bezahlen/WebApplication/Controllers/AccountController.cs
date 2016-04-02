@@ -6,7 +6,6 @@ using System.Web.Http;
 using Domain;
 using Domain.Data;
 using Domain.Data.DB;
-using Newtonsoft.Json;
 using WebApplication.Models.Account;
 
 namespace WebApplication.Controllers
@@ -98,6 +97,16 @@ namespace WebApplication.Controllers
         });
       }
       return result;
+    }
+
+    [Route("api/wallet/RemoveSelfFromWallet")]
+    [HttpPost]
+    public async Task RemoveSelfFromAccount(RemoveSelfFromAccountInput model)
+    {
+      var userId = int.Parse(Request.Headers.GetValues("Token").First());
+      var user = userManager.GetUserById(userId);
+      var account = accountManager.GetAccountById(model.AccountId);
+      await accountManager.RemoveUserFromAccount(user, account);
     }
 
   }

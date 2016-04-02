@@ -56,7 +56,17 @@ namespace Domain
       int amountUsers = data.UserAccounts.Data.Where(x => x.Account == account).Select(x => x.User).Count();
       return (int) ((double) userSum - (double) allSum/ amountUsers);
     }
-    
+
+    public async Task RemoveUserFromAccount(User user, Account account)
+    {
+      var userAccount = data.UserAccounts.Data.First(x => x.User == user && x.Account == account);
+      await data.UserAccounts.RemoveAsync(userAccount);
+      if (account.UserAccounts.Count == 0)
+      {
+        await data.Accounts.RemoveAsync(account);
+      }
+    }
+
 
   }
 }
