@@ -40,10 +40,5 @@ namespace Domain
     public Account GetAccountById(int id)
       => data.Accounts.Data.First(x => x.AccountID == id);
 
-    public async Task RemoveUserFromAccount(User user, Account account)
-    {
-      var userAccount = data.UserAccounts.Data.First(x => x.User == user && x.Account == account);
-      await data.UserAccounts.RemoveAsync(userAccount);
-    }
   }
 }

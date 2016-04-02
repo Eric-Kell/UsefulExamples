@@ -22,11 +22,14 @@ namespace WebApplication.Controllers
       accountManager = new AccountManager(d);
     }
 
+    [Route("api/payment/Add")]
+    [HttpPost]
     public async Task AddPayment(AddPaymentInput model)
     {
       var userId = int.Parse(Request.Headers.GetValues("Token").First());
       var user = userManager.GetUserById(userId);
       var account = accountManager.GetAccountById(model.AccountId);
+      await paymentManager.CreatePayment(model.Text, model.DateTime, user, account, model.Value);
     }
   }
 }

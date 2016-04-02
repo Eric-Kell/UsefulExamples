@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebApplication.Models.Payment
 {
@@ -11,5 +7,6 @@ namespace WebApplication.Models.Payment
     public string Text { get; set; }
     public DateTime DateTime { get; set; }
     public int AccountId { get; set; }
+    public int Value { get; set; }
   }
 }

@@ -103,6 +103,7 @@
     <Compile Include="FakeRepository.cs" />
     <Compile Include="Logic\LogicTest.cs" />
     <Compile Include="Logic\AccountManagerTest.cs" />
+    <Compile Include="Logic\PaymentManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AsyncHelpers.cs" />
     <Compile Include="DB\DataBaseTest.cs" />

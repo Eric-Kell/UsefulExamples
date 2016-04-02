@@ -43,14 +43,6 @@ namespace UnitTests.Logic
     }
 
     [TestMethod]
-    public void GetLoginByIdTest()
-    {
-      var user = data.Users.Data.First();
-      var result = userManager.GetLoginById(user.UserID);
-      Assert.AreEqual(result, user.Login);
-    }
-
-    [TestMethod]
     public void GetUserByIdTest()
     {
       var user = data.Users.Data.First();

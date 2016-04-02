@@ -20,9 +20,6 @@ namespace Domain
     public async Task AddUserAsync(User user)
       => await data.Users.AddAsync(user);
 
-    public string GetLoginById(int userId)
-      => data.Users.Data.First(x => x.UserID == userId).Login;
-
     public User GetUserById(int userId)
       => data.Users.Data.First(x => x.UserID == userId);
   }

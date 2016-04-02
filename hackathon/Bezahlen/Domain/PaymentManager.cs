@@ -14,14 +14,18 @@ namespace Domain
       data = d;
     }
 
-    //public async Task<int> CreatePayment(string text, DateTime date, User user, Account account)
-    //{
-    //  var payment = new Payment
-    //  {
-    //    Date = date,
-    //    Text = text,
-    //    User = user
-    //  };
-    //}
+    public async Task<int> CreatePayment(string text, DateTime date, User user, Account account, int value)
+    {
+      var payment = new Payment
+      {
+        Date = date,
+        Text = text,
+        User = user,
+        Account = account,
+        Value = value
+      };
+      await data.Payments.AddAsync(payment);
+      return payment.PaymentID;
+    }
   }
 }
