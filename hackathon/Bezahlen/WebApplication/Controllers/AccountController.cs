@@ -41,24 +41,14 @@ namespace WebApplication.Controllers
       };
     }
 
-    //[Route("api/wallet/AddUserToWallet")]
-    //[HttpPost]
-    //public async Task AddUserToAccount(AddUserToAccountInput model)
-    //{
-    //  var userId = int.Parse(Request.Headers.GetValues("Token").First());
-    //  var account = accountManager.GetAccountById(model.AccountId);
-    //  await accountManager.BindUserToAccountByUserId(account, new List<string> { model.Login });
-    //}
-
-    //[Route("api/wallet/RemoveSelfFromWallet")]
-    //[HttpPost]
-    //public async Task RemoveSelfFromAccount(RemoveSelfFromAccountInput model)
-    //{
-    //  var userId = int.Parse(Request.Headers.GetValues("Token").First());
-    //  var user = userManager.GetUserById(userId);
-    //  var account = accountManager.GetAccountById(model.AccountId);
-    //  await accountManager.RemoveUserFromAccount(user, account);
-    //}
+    [Route("api/wallet/AddUserToWallet")]
+    [HttpPost]
+    public async Task AddUserToAccount(AddUserToAccountInput model)
+    {
+      var userId = int.Parse(Request.Headers.GetValues("Token").First());
+      var account = accountManager.GetAccountById(model.WalletId);
+      await accountManager.BindUserToAccountByUserId(account, userId);
+    }
 
   }
 }

@@ -2,7 +2,6 @@
 {
   public class AddUserToAccountInput
   {
-    public int AccountId { get; set; }
-    public string Login { get; set; }
+    public int WalletId { get; set; }
   }
 }
