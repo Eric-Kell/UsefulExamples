@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Domain;
@@ -29,7 +30,7 @@ namespace WebApplication.Controllers
       var userId = int.Parse(Request.Headers.GetValues("Token").First());
       var user = userManager.GetUserById(userId);
       var account = accountManager.GetAccountById(model.AccountId);
-      await paymentManager.CreatePayment(model.Text, model.DateTime, user, account, model.Value);
+      await paymentManager.CreatePayment(model.Text, DateTime.Now, user, account, model.Value);
     }
   }
 }
