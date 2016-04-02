@@ -7,29 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+
 namespace UnitTests.DB
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class Account
+  using System;
+  using System.Collections.Generic;
+
+  public partial class Account
+  {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",
+      "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public Account()
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Account()
-        {
-            this.Payments = new HashSet<Payment>();
-            this.UserAccounts = new HashSet<UserAccount>();
-        }
-    
-        public int AccountID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public Nullable<int> TargetSum { get; set; }
-        public Nullable<int> StartDay { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payment> Payments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserAccount> UserAccounts { get; set; }
+      this.Payments = new HashSet<Payment>();
+      this.UserAccounts = new HashSet<UserAccount>();
     }
+
+    public int AccountID { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public Nullable<int> TargetSum { get; set; }
+    public Nullable<int> StartDay { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    [JsonIgnore]
+    [ScriptIgnore]
+    public virtual ICollection<Payment> Payments { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    [JsonIgnore]
+    [ScriptIgnore]
+    public virtual ICollection<UserAccount> UserAccounts { get; set; }
+  }
 }

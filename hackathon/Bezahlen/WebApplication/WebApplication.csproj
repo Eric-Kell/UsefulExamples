@@ -178,9 +178,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\AccountsExport.cs" />
     <Compile Include="Models\Account\AddUserToAccountInput.cs" />
     <Compile Include="Models\Account\CreateAccountInput.cs" />
     <Compile Include="Models\Account\CreateAccountOutput.cs" />
+    <Compile Include="Models\Account\PaymentExport.cs" />
     <Compile Include="Models\Account\RemoveSelfFromAccountInput.cs" />
     <Compile Include="Models\Payment\AddPaymentInput.cs" />
     <Compile Include="Models\User\EntranceInput.cs" />

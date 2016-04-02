@@ -7,18 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+
 namespace UnitTests.DB
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class UserAccount
-    {
-        public int UserAccountID { get; set; }
-        public int UserID { get; set; }
-        public int AccountID { get; set; }
-    
-        public virtual Account Account { get; set; }
-        public virtual User User { get; set; }
-    }
+  using System;
+  using System.Collections.Generic;
+
+  public partial class UserAccount
+  {
+    public int UserAccountID { get; set; }
+    public int UserID { get; set; }
+    public int AccountID { get; set; }
+
+    [JsonIgnore]
+    [ScriptIgnore]
+    public virtual Account Account { get; set; }
+
+    [JsonIgnore]
+    [ScriptIgnore]
+    public virtual User User { get; set; }
+  }
 }

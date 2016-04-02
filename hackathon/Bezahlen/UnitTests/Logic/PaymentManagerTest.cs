@@ -36,5 +36,17 @@ namespace UnitTests.Logic
       Assert.AreEqual(date, result.Date);
     }
 
+    [TestMethod]
+    public void GetPaymentsByAccountTest()
+    {
+      var account = data.Accounts.Data.First();
+      var payment = data.Payments.Data.First();
+      var result = paymentManager.GetPaymentsByAccount(account);
+      Assert.AreEqual(1, result.Count());
+      Assert.AreSame(payment, result.First());
+    }
+
+    
+
   }
 }

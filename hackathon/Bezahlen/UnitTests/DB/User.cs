@@ -7,28 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+
 namespace UnitTests.DB
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class User
+  using System;
+  using System.Collections.Generic;
+
+  public partial class User
+  {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",
+      "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public User()
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
-        {
-            this.Payments = new HashSet<Payment>();
-            this.UserAccounts = new HashSet<UserAccount>();
-        }
-    
-        public int UserID { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string Nickname { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payment> Payments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserAccount> UserAccounts { get; set; }
+      this.Payments = new HashSet<Payment>();
+      this.UserAccounts = new HashSet<UserAccount>();
     }
+
+    public int UserID { get; set; }
+    public string Login { get; set; }
+    public string Password { get; set; }
+    public string Nickname { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    [JsonIgnore]
+    [ScriptIgnore]
+    public virtual ICollection<Payment> Payments { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    [JsonIgnore]
+    [ScriptIgnore]
+    public virtual ICollection<UserAccount> UserAccounts { get; set; }
+  }
 }

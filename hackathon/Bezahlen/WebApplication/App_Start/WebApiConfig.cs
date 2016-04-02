@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using Domain.Data;
 using Microsoft.Practices.Unity;
+using Newtonsoft.Json;
 using WebApplication.Services;
 
 namespace WebApplication
@@ -24,6 +25,8 @@ namespace WebApplication
       container.RegisterType<IData, Data>(new InjectionFactory(x => Data.Instance));
       config.DependencyResolver = new UnityResolver(container);
       config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+      
     }
   }
 }

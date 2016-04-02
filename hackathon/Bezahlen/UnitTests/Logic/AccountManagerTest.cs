@@ -51,5 +51,35 @@ namespace UnitTests.Logic
       Assert.AreSame(account, result);
     }
 
+    [TestMethod]
+    public void GetUserAccountsTest()
+    {
+      var account = data.Accounts.Data.First();
+      var user = data.Users.Data.First();
+      var result = accountManager.GetUserAccounts(user);
+      Assert.AreEqual(1, result.Count());
+      Assert.AreSame(account, result.First());
+    }
+
+    [TestMethod]
+    public void GetOwnersLoginsTest()
+    {
+      var account = data.Accounts.Data.First();
+      var user = data.Users.Data.First();
+      var result = accountManager.GetOwnersLogins(account);
+      Assert.AreEqual(result.Count, 1);
+      Assert.AreEqual(user.Login, result.First());
+    }
+
+    [TestMethod]
+    public void GetUserBalanceTest()
+    {
+      var account = data.Accounts.Data.First();
+      var user = data.Users.Data.First();
+      var payment = data.Payments.Data.First();
+      var result = accountManager.GetUserBalance(user, account);
+      Assert.AreEqual(result, 0);
+    }
+
   }
 }
