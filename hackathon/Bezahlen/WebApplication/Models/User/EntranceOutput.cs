@@ -3,6 +3,6 @@
   public class EntranceOutput
   {
     public string Token { get; set; }
-    public string Login { get; set; }
+    public string Nick { get; set; }
   }
 }

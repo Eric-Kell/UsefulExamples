@@ -34,7 +34,7 @@ namespace WebApplication.Controllers
       return new RegistrationOutput
       {
         Token = token,
-        Login = user.Login
+        Nick = user.Nickname
       };
     }
 
@@ -51,7 +51,7 @@ namespace WebApplication.Controllers
       return new EntranceOutput
       {
         Token = token,
-        Login = user.Login
+        Nick = user.Nickname
       };
     }
 
