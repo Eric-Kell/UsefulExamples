@@ -43,10 +43,21 @@ namespace UnitTests.Logic
     }
 
     [TestMethod]
-    public void GetUserByIdTest()
+    public async Task GetTokenForUserTest()
+    {
+      var amount = data.Tokens.Data.Count();
+      var user = data.Users.Data.First();
+      var result = await userManager.GetTokenForUserAsync(user);
+      Assert.AreEqual(amount + 1, data.Tokens.Data.Count());
+      Assert.AreNotEqual(null, result);
+    }
+
+    [TestMethod]
+    public void GetUserByTokenTest()
     {
       var user = data.Users.Data.First();
-      var result = userManager.GetUserById(user.UserID);
+      var token = data.Tokens.Data.First();
+      var result = userManager.GetUserByToken(token.Value);
       Assert.AreSame(user, result);
     }
   }

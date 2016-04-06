@@ -8,5 +8,6 @@ namespace Domain.Data
     IRepository<Payment> Payments { get; }
     IRepository<User> Users { get; }
     IRepository<UserAccount> UserAccounts { get; }
+    IRepository<Token> Tokens { get; } 
   }
 }

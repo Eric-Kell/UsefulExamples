@@ -94,6 +94,9 @@
     <Compile Include="DB\Payment.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Token.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\User.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>

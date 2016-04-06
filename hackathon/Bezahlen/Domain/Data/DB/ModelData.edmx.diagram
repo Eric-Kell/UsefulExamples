@@ -4,14 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5203d6d7482e44bb910d38b91bcf2c05" Name="Diagram1">
-        <EntityTypeShape EntityType="Hac2112DBModel.Account" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.Payment" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.UserAccount" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Hac2112DBModel.User" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+      <Diagram DiagramId="176623d2bac64d409c87f1d459d866af" Name="Diagram1">
+        <EntityTypeShape EntityType="Hac2112DBModel.Account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.Payment" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.Token" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.UserAccount" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hac2112DBModel.User" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_Payments_dbo_Accounts_AccountID" ManuallyRouted="false" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_UserAccounts_dbo_Accounts_AccountID" ManuallyRouted="false" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_Payments_dbo_Users_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="Hac2112DBModel.FK_dbo_Tokens_dbo_Users_UserID" ManuallyRouted="false" />
         <AssociationConnector Association="Hac2112DBModel.FK_dbo_UserAccounts_dbo_Users_UserID" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

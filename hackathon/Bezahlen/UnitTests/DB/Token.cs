@@ -12,13 +12,12 @@ namespace UnitTests.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class UserAccount
+    public partial class Token
     {
-        public int UserAccountID { get; set; }
+        public int TokenID { get; set; }
+        public string Value { get; set; }
         public int UserID { get; set; }
-        public int AccountID { get; set; }
     
-        public virtual Account Account { get; set; }
         public virtual User User { get; set; }
     }
 }

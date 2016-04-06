@@ -9,7 +9,7 @@ namespace WebApplication.Models.Account
   public class PaymentExport
   {
     public string Text { get; set; }
-    public System.DateTime Date { get; set; }
+    public string  Date { get; set; }
     public int Value { get; set; }
     public string Login { get; set; }
   }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Domain;
@@ -23,14 +25,19 @@ namespace WebApplication.Controllers
       accountManager = new AccountManager(d);
     }
 
-    [Route("api/payment/Add")]
-    [HttpPost]
-    public async Task AddPayment(AddPaymentInput model)
+    [System.Web.Http.Route("api/payment/Add")]
+    [System.Web.Http.HttpPost]
+    public async Task<HttpResponseMessage> AddPayment(AddPaymentInput model)
     {
-      var userId = int.Parse(Request.Headers.GetValues("Token").First());
-      var user = userManager.GetUserById(userId);
+      var token = Request.Headers.GetValues("Token").First();
+      var user = userManager.GetUserByToken(token);
+      if (user == null)
+      {
+        return Request.CreateErrorResponse(HttpStatusCode.NotFound, token);
+      }
       var account = accountManager.GetAccountById(model.AccountId);
       await paymentManager.CreatePayment(model.Text, DateTime.Now, user, account, model.Value);
+      return Request.CreateErrorResponse(HttpStatusCode.NoContent, "success");
     }
   }
 }

@@ -78,6 +78,9 @@
     <Compile Include="Data\DB\Payment.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\DB\Token.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\DB\User.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>

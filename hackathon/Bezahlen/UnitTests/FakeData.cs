@@ -11,6 +11,7 @@ namespace UnitTests
     public IRepository<Payment> Payments { get; } = new FakeRepository<Payment>();
     public IRepository<User> Users { get; } = new FakeRepository<User>();
     public IRepository<UserAccount> UserAccounts { get; } = new FakeRepository<UserAccount>();
+    public IRepository<Token> Tokens { get; } = new FakeRepository<Token>(); 
 
     public FakeData()
     {
@@ -48,6 +49,11 @@ namespace UnitTests
         UserAccountID = MoqDataGenerator.GetRandomNumber(1, 100)
       };
 
+      var token = new Token
+      {
+        Value = MoqDataGenerator.GetRandomString(10)
+      };
+
 
       // устанавливаем связи
       account.UserAccounts = new List<UserAccount> {userAccount};
@@ -61,11 +67,14 @@ namespace UnitTests
       userAccount.Account = account;
       userAccount.UserID = user.UserID;
       userAccount.AccountID = account.AccountID;
+      token.User = user;
+      token.UserID = user.UserID;
 
       await Accounts.AddAsync(account);
       await Payments.AddAsync(payment);
       await Users.AddAsync(user);
       await UserAccounts.AddAsync(userAccount);
+      await Tokens.AddAsync(token);
 
     }
   }

@@ -2,6 +2,6 @@
 {
   public class RemoveSelfFromAccountInput
   {
-    public int AccountId { get; set; }
+    public int WalletId { get; set; }
   }
 }

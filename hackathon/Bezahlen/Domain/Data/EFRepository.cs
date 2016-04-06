@@ -7,10 +7,10 @@ namespace Domain.Data
 {
   public class EFRepository<TEntity> : IRepository<TEntity> where TEntity : class
   {
-    private Hac2112DBEntities2 context;
+    private Hac2112DBEntities1 context;
     private DbSet<TEntity> dbSet;
 
-    public EFRepository(Hac2112DBEntities2 c, DbSet<TEntity> d)
+    public EFRepository(Hac2112DBEntities1 c, DbSet<TEntity> d)
     {
       context = c;
       dbSet = context.Set<TEntity>();

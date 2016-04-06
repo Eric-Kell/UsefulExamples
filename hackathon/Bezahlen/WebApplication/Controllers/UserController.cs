@@ -30,24 +30,28 @@ namespace WebApplication.Controllers
         Nickname = input.Nickname
       };
       await manager.AddUserAsync(user);
+      var token = await manager.GetTokenForUserAsync(user);
       return new RegistrationOutput
       {
-        Token = user.UserID
+        Token = token,
+        Login = user.Login
       };
     }
 
     [Route("api/user/entrance")]
     [HttpPost]
-    public EntranceOutput Entrance (EntranceInput input)
+    public async Task<EntranceOutput> Entrance (EntranceInput input)
     {
       var user = manager.TryEnter(input.Login, input.Password);
       if (user == null)
       {
         throw new HttpResponseException(HttpStatusCode.NotFound);
       }
+      var token = await manager.GetTokenForUserAsync(user);
       return new EntranceOutput
       {
-        Token = user.UserID
+        Token = token,
+        Login = user.Login
       };
     }
 

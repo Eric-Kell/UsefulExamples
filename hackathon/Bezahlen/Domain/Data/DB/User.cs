@@ -18,6 +18,7 @@ namespace Domain.Data.DB
         public User()
         {
             this.Payments = new HashSet<Payment>();
+            this.Tokens = new HashSet<Token>();
             this.UserAccounts = new HashSet<UserAccount>();
         }
     
@@ -28,6 +29,8 @@ namespace Domain.Data.DB
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Payment> Payments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Token> Tokens { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserAccount> UserAccounts { get; set; }
     }

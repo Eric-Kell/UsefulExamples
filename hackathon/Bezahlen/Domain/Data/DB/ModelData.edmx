@@ -26,6 +26,14 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="AccountID" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Tokens">
+          <Key>
+            <PropertyRef Name="TokenID" />
+          </Key>
+          <Property Name="TokenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="UserAccounts">
           <Key>
             <PropertyRef Name="UserAccountID" />
@@ -71,6 +79,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_dbo_Tokens_dbo_Users_UserID">
+          <End Role="Users" Type="Self.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tokens" Type="Self.Tokens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Tokens">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_UserAccounts_dbo_Accounts_AccountID">
           <End Role="Accounts" Type="Self.Accounts" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -102,6 +124,7 @@
         <EntityContainer Name="Hac2112DBModelStoreContainer">
           <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserAccounts" EntityType="Self.UserAccounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_dbo_Payments_dbo_Accounts_AccountID" Association="Self.FK_dbo_Payments_dbo_Accounts_AccountID">
@@ -111,6 +134,10 @@
           <AssociationSet Name="FK_dbo_Payments_dbo_Users_UserID" Association="Self.FK_dbo_Payments_dbo_Users_UserID">
             <End Role="Users" EntitySet="Users" />
             <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tokens_dbo_Users_UserID" Association="Self.FK_dbo_Tokens_dbo_Users_UserID">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tokens" EntitySet="Tokens" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_UserAccounts_dbo_Accounts_AccountID" Association="Self.FK_dbo_UserAccounts_dbo_Accounts_AccountID">
             <End Role="Accounts" EntitySet="Accounts" />
@@ -151,6 +178,15 @@
           <NavigationProperty Name="Account" Relationship="Self.FK_dbo_Payments_dbo_Accounts_AccountID" FromRole="Payments" ToRole="Accounts" />
           <NavigationProperty Name="User" Relationship="Self.FK_dbo_Payments_dbo_Users_UserID" FromRole="Payments" ToRole="Users" />
         </EntityType>
+        <EntityType Name="Token">
+          <Key>
+            <PropertyRef Name="TokenID" />
+          </Key>
+          <Property Name="TokenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_dbo_Tokens_dbo_Users_UserID" FromRole="Tokens" ToRole="Users" />
+        </EntityType>
         <EntityType Name="UserAccount">
           <Key>
             <PropertyRef Name="UserAccountID" />
@@ -170,6 +206,7 @@
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Nickname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Payments" Relationship="Self.FK_dbo_Payments_dbo_Users_UserID" FromRole="Users" ToRole="Payments" />
+          <NavigationProperty Name="Tokens" Relationship="Self.FK_dbo_Tokens_dbo_Users_UserID" FromRole="Users" ToRole="Tokens" />
           <NavigationProperty Name="UserAccounts" Relationship="Self.FK_dbo_UserAccounts_dbo_Users_UserID" FromRole="Users" ToRole="UserAccounts" />
         </EntityType>
         <Association Name="FK_dbo_Payments_dbo_Accounts_AccountID">
@@ -214,6 +251,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_dbo_Tokens_dbo_Users_UserID">
+          <End Role="Users" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tokens" Type="Self.Token" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Tokens">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_UserAccounts_dbo_Users_UserID">
           <End Role="Users" Type="Self.User" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -228,9 +279,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Hac2112DBEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Hac2112DBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Payments" EntityType="Self.Payment" />
+          <EntitySet Name="Tokens" EntityType="Self.Token" />
           <EntitySet Name="UserAccounts" EntityType="Self.UserAccount" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK_dbo_Payments_dbo_Accounts_AccountID" Association="Self.FK_dbo_Payments_dbo_Accounts_AccountID">
@@ -245,6 +297,10 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Payments" EntitySet="Payments" />
           </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tokens_dbo_Users_UserID" Association="Self.FK_dbo_Tokens_dbo_Users_UserID">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tokens" EntitySet="Tokens" />
+          </AssociationSet>
           <AssociationSet Name="FK_dbo_UserAccounts_dbo_Users_UserID" Association="Self.FK_dbo_UserAccounts_dbo_Users_UserID">
             <End Role="Users" EntitySet="Users" />
             <End Role="UserAccounts" EntitySet="UserAccounts" />
@@ -255,7 +311,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Hac2112DBModelStoreContainer" CdmEntityContainer="Hac2112DBEntities2">
+        <EntityContainerMapping StorageEntityContainer="Hac2112DBModelStoreContainer" CdmEntityContainer="Hac2112DBEntities1">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="Hac2112DBModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
@@ -276,6 +332,15 @@
                 <ScalarProperty Name="Value" ColumnName="Value" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tokens">
+            <EntityTypeMapping TypeName="Hac2112DBModel.Token">
+              <MappingFragment StoreEntitySet="Tokens">
+                <ScalarProperty Name="TokenID" ColumnName="TokenID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

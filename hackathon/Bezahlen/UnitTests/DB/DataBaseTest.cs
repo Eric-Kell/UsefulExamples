@@ -14,7 +14,7 @@ namespace UnitTests
   [TestClass]
   public class DataBaseTest
   {
-    private readonly Hac2112DBEntities2 _context = new Hac2112DBEntities2();
+    private readonly Hac2112DBEntities4 _context = new Hac2112DBEntities4();
 
     // создадим тестовые данные
 
@@ -46,14 +46,16 @@ namespace UnitTests
       UserAccountID = MoqDataGenerator.GetRandomNumber(1, 100)
     };
 
+    private Token token = new Token
+    {
+      Value = MoqDataGenerator.GetRandomString(10)
+    };
+
     private int _amountUsersWas;
-    private int _amountAccountPaymentsWas;
     private int _amountAccountsWas;
     private int _amountPaymentsWas;
-    private int _amountPurchasesWas;
-    private int _amountPurchasePaymentsWas;
     private int _amountUserAccountsWas;
-    private int _amountUserPurchasesWas;
+    private int _amountTokensWas;
 
 
     [TestMethod]
@@ -92,18 +94,21 @@ namespace UnitTests
       userAccount.User = user;
       userAccount.Account = account;
       payment.Account = account;
+      token.User = user;
 
       // запомним текущие количества
       _amountUsersWas = _context.Users.Count();
       _amountAccountsWas = _context.Accounts.Count();
       _amountPaymentsWas = _context.Payments.Count();
       _amountUserAccountsWas = _context.UserAccounts.Count();
+      _amountTokensWas = _context.Tokens.Count();
 
       // добавим в бд
       _context.Users.Add(user);
       _context.Accounts.Add(account);
       _context.Payments.Add(payment);
       _context.UserAccounts.Add(userAccount);
+      _context.Tokens.Add(token);
 
       _context.SaveChanges();
       // проверим количества
@@ -111,6 +116,7 @@ namespace UnitTests
       Assert.AreEqual(_amountAccountsWas + 1, _context.Accounts.Count());
       Assert.AreEqual(_amountPaymentsWas + 1, _context.Payments.Count());
       Assert.AreEqual(_amountUserAccountsWas + 1, _context.UserAccounts.Count());
+      Assert.AreEqual(_amountTokensWas + 1, _context.Tokens.Count());
       // проверить, что наши экземпляры сущностей лежат в БД
       CheckEntitiesAreInDB();
     }
@@ -126,11 +132,13 @@ namespace UnitTests
       payment.Date = DateTime.Now;
       payment.Text = MoqDataGenerator.GetRandomString(10);
       payment.Value = MoqDataGenerator.GetRandomNumber(1, 100);
+      token.Value = MoqDataGenerator.GetRandomString(11);
 
       // сохраним изменения в БД
       _context.Entry(user).State = EntityState.Modified;
       _context.Entry(account).State = EntityState.Modified;
       _context.Entry(payment).State = EntityState.Modified;
+      _context.Entry(token).State = EntityState.Modified;
       _context.SaveChanges();
 
       // проверить, что наши экземпляры сущностей по-прежнему лежат в БД
@@ -144,6 +152,7 @@ namespace UnitTests
       int accountId = account.AccountID;
       int paymentId = payment.PaymentID;
       int userAccountId = userAccount.UserAccountID;
+      int tokenId = token.TokenID;
 
       // удалим из бд (каскадно)
       _context.Users.Remove(user);
@@ -155,12 +164,14 @@ namespace UnitTests
       Assert.AreEqual(_amountAccountsWas, _context.Accounts.Count());
       Assert.AreEqual(_amountPaymentsWas, _context.Payments.Count());
       Assert.AreEqual(_amountUserAccountsWas, _context.UserAccounts.Count());
+      Assert.AreEqual(_amountTokensWas, _context.Tokens.Count());
 
       // проверим, что таких сущностей теперь нету
       Assert.AreEqual(null, _context.Users.FirstOrDefault(x => x.UserID == userId));
       Assert.AreEqual(null, _context.Accounts.FirstOrDefault(x => x.AccountID == accountId));
       Assert.AreEqual(null, _context.Payments.FirstOrDefault(x => x.PaymentID == paymentId));
       Assert.AreEqual(null, _context.UserAccounts.FirstOrDefault(x => x.UserAccountID == userAccountId));
+      Assert.AreEqual(null, _context.Tokens.FirstOrDefault(x => x.TokenID == tokenId));
     }
 
     private void CheckEntitiesAreInDB()
@@ -169,6 +180,7 @@ namespace UnitTests
       Assert.AreSame(account, _context.Accounts.First(x => x.AccountID == account.AccountID));
       Assert.AreSame(payment, _context.Payments.First(x => x.PaymentID == payment.PaymentID));
       Assert.AreSame(userAccount, _context.UserAccounts.First(x => x.UserAccountID == userAccount.UserAccountID));
+      Assert.AreSame(token, _context.Tokens.First(x => x.TokenID == token.TokenID));
     }
   }
 }

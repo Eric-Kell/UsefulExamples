@@ -2,6 +2,7 @@
 {
   public class EntranceOutput
   {
-    public int Token { get; set; }
+    public string Token { get; set; }
+    public string Login { get; set; }
   }
 }
