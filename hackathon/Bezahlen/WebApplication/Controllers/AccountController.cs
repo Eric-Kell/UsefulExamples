@@ -119,7 +119,7 @@ namespace WebApplication.Controllers
         // get payments
         var payments = paymentManager.GetPaymentsByAccount(account).Select(x => new PaymentExport
         {
-          Date = x.Date.ToString("yyyy-MM-dd"),
+          Date = x.Date.ToString("yyyy-MM-dd H:mm:ss"),
           Text = x.Text,
           Login = x.User.Login,
           Value = Convert.ToInt32(x.Value)
